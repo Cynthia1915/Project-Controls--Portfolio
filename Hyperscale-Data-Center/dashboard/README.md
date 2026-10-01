@@ -2,7 +2,9 @@
 
 This folder contains the Looker Studio dashboards developed for the simulated **Hyperscale Data Center Project Controls** portfolio project.
 
-The dashboards are designed to transform schedule, earned value, forecast, and risk data into management-level project controls insights.
+The dashboards transform schedule, earned value, forecast, and risk information into management-level project controls insights.
+
+---
 
 ## 01 — Executive Project Controls Overview
 
@@ -12,13 +14,13 @@ Provides an executive view of overall project performance, including:
 - Earned Value (EV)
 - Actual Cost (AC)
 - CPI & SPI
-- Earned Value trend
+- Earned Value trends
 - WBS performance
 - Critical and low-float exposure
 - Management alerts
 - Multi-period performance tracking
 
-![01-executive-overview.png)
+![Executive Project Controls Overview](01-executive-overview.png)
 
 ---
 
@@ -26,15 +28,15 @@ Provides an executive view of overall project performance, including:
 
 Focuses on cost performance and forward-looking project forecasts, including:
 
-- EAC forecasting
-- ETC
-- VAC
+- Estimate at Completion (EAC)
+- Estimate to Complete (ETC)
+- Variance at Completion (VAC)
 - Forecast scenarios
 - Cost variance analysis
 - Scenario comparison
 - Management interpretation
 
-![Cost and Forecast Intelligence](looker-studio-cost-forecast.png)
+![Cost and Forecast Intelligence](02-cost-forecast.png)
 
 ---
 
@@ -46,11 +48,11 @@ Provides schedule-focused project controls intelligence, including:
 - Critical activities
 - Low-float exposure
 - Schedule variance
-- Critical path exposure
+- Critical-path exposure
 - Schedule risk indicators
 - Management alerts
 
-![Schedule and Risk Intelligence](looker-studio-schedule-risk.png)
+![Schedule and Risk Intelligence](03-schedule-risk.png)
 
 ---
 
@@ -58,7 +60,7 @@ Provides schedule-focused project controls intelligence, including:
 
 The objective is not simply to visualize project data.
 
-The dashboards are designed to help identify **how project performance changes between reporting periods** and translate those changes into actionable management insight.
+The dashboards are designed to identify **how project performance changes between reporting periods** and translate those changes into actionable management insight.
 
 ---
 
