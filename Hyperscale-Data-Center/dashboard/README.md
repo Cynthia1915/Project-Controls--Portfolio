@@ -18,7 +18,7 @@ Provides an executive view of overall project performance, including:
 - Management alerts
 - Multi-period performance tracking
 
-![Executive Project Controls Overview](looker-studio-executive-dashboard.png)
+![01-executive-overview.png)
 
 ---
 
