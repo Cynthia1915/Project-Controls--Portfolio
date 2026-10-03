@@ -1,1 +1,38 @@
 
+# Primavera P6 Schedule
+
+This section documents the Primavera P6 schedule developed for the simulated **Hyperscale Data Center** project.
+
+## Project Controls Scope
+
+- Work Breakdown Structure (WBS)
+- Activity development and sequencing
+- Schedule logic and relationships
+- Project milestones
+- Critical path analysis
+- Total float analysis
+- Schedule health checks
+- Progress updates
+- Multi-period schedule analysis
+
+## Schedule Development
+
+The Primavera P6 schedule forms the foundation of the project controls workflow.
+
+Schedule information is subsequently used for performance analysis, earned value calculations, forecasting, and executive reporting.
+
+## Reporting Evolution
+
+**Baseline Schedule**  
+↓  
+**Update 01**  
+↓  
+**Update 02**  
+↓  
+**Schedule & Performance Analysis**  
+↓  
+**Executive Dashboard**
+
+---
+
+*This is a simulated project developed for portfolio demonstration purposes.*
