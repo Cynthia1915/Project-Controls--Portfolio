@@ -1,32 +1,35 @@
-# Project-Controls Portfolio
+# Project Controls & Project Intelligence Portfolio
 
-Portfolio of PMO Analytics, Primavera P6, Project Controls, Dashboard Development, and Automation Projects.
+**Planning & Scheduling | Project Controls | EVM & Forecasting | Schedule Risk | PMO Analytics | Automation**
 
-## About
+An independent engineering portfolio demonstrating how Primavera P6 scheduling, project performance analysis, quantitative risk assessment and data automation can support better project delivery decisions.
 
-This repository showcases project controls and PMO analytics solutions developed using Primavera P6, Python, and business intelligence tools.
+### Featured Case Studies
 
-The objective is to transform project data into actionable insights that support schedule risk management, performance monitoring, and executive decision-making.
+**01 — Hyperscale Data Center | Integrated Project Controls**
 
-## Projects
+An integrated scheduling and performance-control case study covering Primavera P6 baseline development, progress updates, earned value analysis, forecasting and executive reporting.
 
-### Primavera P6 Baseline Risk Intelligence Engine V1
+**02 — Monte Carlo Schedule Risk | Probabilistic Forecasting**
 
-A Python-based analytics engine designed to identify high-risk activities and vulnerable work packages before project execution begins.
+A schedule risk analysis exploring completion-date confidence, uncertainty drivers, contingency requirements and mitigation scenarios using documented assumptions.
 
-**Tools Used**
+**03 — Schedule Health & Assurance | Automated P6 Review**
 
-* Primavera P6
-* Python
-* Pandas
-* Google Colab
+A schedule quality assessment workflow designed to identify planning exceptions, review schedule integrity and prioritize corrective actions.
 
-**Key Results**
+*Development in progress.*
 
-* 4,218 activities analyzed
-* 197 critical activities identified
-* 9 executive-level risk activities prioritized
-* Steel Structure Works critical density ≈ 49%
-* MEP approval identified as a major schedule driver
+### Core Competencies
 
-More projects will be added as the portfolio expands.
+- **Project Controls:** Baseline scheduling, progress measurement, EVM, CPI/SPI, forecasting and variance analysis
+- **Planning & Risk:** Primavera P6, critical path analysis, schedule quality, Monte Carlo simulation and contingency assessment
+- **Digital Analytics:** Python, Excel, Looker Studio, reporting automation and management dashboards
+
+### Professional Focus
+
+Interested in opportunities involving Project Controls, Planning & Scheduling, Digital PMO, Project Intelligence and engineering consulting, particularly across the UAE and Saudi Arabia.
+
+### Portfolio Transparency
+
+These are independent portfolio case studies using synthetic or simulated project data and documented assumptions. They demonstrate analytical methods and technical capabilities, not ownership of live client projects.
