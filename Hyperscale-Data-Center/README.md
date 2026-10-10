@@ -10,7 +10,7 @@ This independent **synthetic project-controls case study** connects baseline pla
 
 ---
 
-## Executive project profile
+[Validation & risk model](./docs/validation-and-risk-model.md) — reproducible QA, EVM reconciliation interface, and network-aware Monte Carlo prototype (not P6 calendar-equivalent).\n\n## Executive project profile
 
 | Parameter | Case-study basis |
 | --- | --- |
