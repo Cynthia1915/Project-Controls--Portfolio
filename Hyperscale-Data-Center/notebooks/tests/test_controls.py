@@ -75,6 +75,12 @@ class EvmTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Duplicate"):
             reconcile([row, row], "2026-01-31")
 
+    def test_nonfinite_values_rejected(self):
+        for invalid in ('nan', 'inf', '-inf'):
+            row = {'activity_id': 'A', 'data_date': '2026-01-31', 'bac': '100', 'pv': '20', 'ev': invalid, 'ac': '10'}
+            with self.subTest(value=invalid), self.assertRaisesRegex(ValueError, 'Non-finite'):
+                reconcile([row], '2026-01-31', expected_bac=100)
+
     def test_zero_denominators(self):
         row = {"activity_id": "A", "data_date": "2026-01-31", "bac": "100", "pv": "0", "ev": "0", "ac": "0"}
         r = reconcile([row], "2026-01-31", expected_bac=100)
