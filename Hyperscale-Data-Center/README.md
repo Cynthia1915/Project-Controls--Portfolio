@@ -6,7 +6,7 @@
 
 This independent **synthetic project-controls case study** connects baseline planning, progress updates, cost and schedule performance analysis, forecasting and management reporting for a hyperscale data-center development.
 
-[← Portfolio overview](../README.md) · [Baseline & progress updates](./docs/baseline-and-schedule-updates.md) · [Schedule evidence](./primavera/) · [Dashboard gallery](./dashboard/) · [Methodology](./docs/methodology.md) · [Reporting data](./data/)
+[← Portfolio overview](../README.md) · [Schedule evidence](./primavera/) · [Dashboard gallery](./dashboard/) · [Methodology](./docs/methodology.md) · [Reporting data](./data/)
 
 ---
 
@@ -28,11 +28,6 @@ This independent **synthetic project-controls case study** connects baseline pla
 **Project objective:** demonstrate a repeatable reporting workflow that helps a project-controls team move from a static schedule snapshot to **performance trends, forecast interpretation and prioritized actions**.
 
 ## 01 — Planning & baseline control
-
-**[Read the Baseline, Schedule & Progress Updates walkthrough →](./docs/baseline-and-schedule-updates.md)**
-
-This guide explains the distinction between the live schedule and frozen Baseline B1, documents Update 01's four-calendar-day RFS forecast variance, and shows how Update 02 should be compared without changing the original P6 files.
-
 
 The Primavera P6 schedule was structured around engineering, procurement, construction, electrical/mechanical systems, utility energization, testing and commissioning, and handover.
 
