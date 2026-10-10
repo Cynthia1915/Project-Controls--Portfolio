@@ -12,7 +12,6 @@ import json
 import math
 import random
 from collections import defaultdict, deque
-from datetime import datetime, timedelta
 from pathlib import Path
 from audit_xer import read_xer
 
@@ -42,7 +41,7 @@ def network(tables):
         pred, succ = r["pred_task_id"], r["task_id"]
         if pred not in by_id or succ not in by_id:
             raise ValueError(f"Unknown predecessor/successor: {pred} -> {succ}")
-        typ = r["pred_type"].replace("PR_", "")
+        typ = r["pred_type"].removeprefix("PR_")
         if typ not in ("FS", "SS", "FF", "SF"):
             raise ValueError(f"Unsupported relationship type: {typ}")
         lag = number(r.get("lag_hr_cnt"))
@@ -96,7 +95,7 @@ def simulate(tables, runs=1000, seed=42, low=0.8, high=1.3, target_code="RFS-040
     target = target_ids[0]
     rng = random.Random(seed)
     values = []
-    # Mode=1.0, uniform min/max are illustrative independent duration multipliers.
+    # Mode=1.0; triangular min/max are illustrative independent duration multipliers.
     for _ in range(runs):
         durations = {k: (rng.triangular(low, high, 1.0) * v if v else 0.0)
                      for k, v in nominal.items()}
