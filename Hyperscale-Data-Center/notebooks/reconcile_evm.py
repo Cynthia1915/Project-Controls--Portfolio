@@ -8,6 +8,7 @@ extract native P6 earned value and does not rewrite dashboard/workbooks.
 import argparse
 import csv
 import json
+import math
 from collections import defaultdict
 from pathlib import Path
 
@@ -28,8 +29,8 @@ def reconcile(rows, selected_date, expected_bac=120_000_000, tolerance=0.01):
                 value = float(row[name])
             except (ValueError, KeyError, TypeError) as exc:
                 raise ValueError(f"Invalid {name} for {key}") from exc
-            if value < 0:
-                raise ValueError(f"Negative {name} for {key}")
+            if not math.isfinite(value) or value < 0:
+                raise ValueError(f"Non-finite or negative {name} for {key}")
             sums[name] += value
     bac, pv, ev, ac = (sums[x] for x in ("bac", "pv", "ev", "ac"))
     def ratio(a, b):
