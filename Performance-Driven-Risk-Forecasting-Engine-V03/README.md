@@ -1,68 +1,41 @@
+# Performance-Driven Risk & Forecasting | Research Prototype V03
 
-# Performance-Driven Risk & Forecasting Engine V03
+**EVM · Performance Exceptions · Exploratory Forecasting · Management Reporting**
 
-## Overview
+[← Portfolio](../README.md)
 
-This project demonstrates a performance-driven project controls analytics engine using Primavera schedule data, progress updates, cost data, Earned Value Management, dynamic risk scoring, and Monte Carlo forecasting.
+## Management question
 
-The objective is to move beyond static dashboards and develop a decision-support workflow that helps identify current performance issues, forecast potential delay exposure, and support executive-level project controls decisions.
+**How can progress, cost and float indicators be combined to prioritize emerging project-control issues?**
 
-## Key Capabilities
+This independent portfolio prototype combines modeled progress, earned value and schedule indicators to generate **rule-based risk scores, exception lists and illustrative forecast scenarios**.
 
-- Progress performance analysis
-- Earned Value Management calculations
-- SPI and CPI performance tracking
-- Dynamic risk scoring
-- Forecast completion analysis
-- Performance-based Monte Carlo simulation
-- Executive recommendations
-- Automated reporting
+## Analytical workflow
 
-## Methodology
+1. Review planned/actual progress, budget, float, PV, EV and AC.
+2. Compute and interpret CPI, SPI and progress variances.
+3. Screen schedule/cost issues and prioritize activities using documented heuristic rules.
+4. Generate management-oriented findings and **illustrative** forecasting outputs.
 
-The model uses a performance dataset containing:
+## What is demonstrated
 
-- Baseline schedule duration
-- Planned progress
-- Actual progress
-- Progress variance
-- Budget cost
-- Planned Value
-- Earned Value
-- Actual Cost
-- SPI
-- CPI
-- Float information
+- Project-controls KPI processing and exception screening.
+- Dynamic risk scoring and escalation prioritization.
+- Exploratory cost/schedule forecasting and summary reporting.
+- Python-based transformation of a modeled performance dataset.
 
-The engine identifies schedule, cost, progress, and float issues, then combines them into a dynamic risk score. It also uses current SPI performance to estimate forecast durations and perform a simplified Monte Carlo simulation.
+## Critical modeling limitation
 
-## Key Outputs
+**The Monte Carlo component uses the maximum sampled activity duration as a simplified proxy for project completion.** It **does not** recalculate a Primavera P6 CPM network, relationships, lags, calendars or a changing critical path.
 
-- Top risk activities
-- Top delay drivers
-- Dynamic risk score
-- Risk category classification
-- Forecast delay exposure
-- P50, P80, and P90 schedule forecast
-- Executive summary report
+Therefore, any P50/P80/P90 values or forecast delay distributions in this prototype are **not valid network-based project completion confidence estimates** and should **not** be used as commercial schedule-risk results.
 
-## Technologies Used
+For the dedicated schedule-risk project and its validation roadmap, see [Monte Carlo Schedule Risk](../Monte-Carlo-Schedule-Risk-Simulator/).
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Google Colab
-- Primavera P6 schedule concepts
-- Earned Value Management
-- Monte Carlo simulation
+## Appropriate management interpretation
 
-## Important Note
+Use the prototype to demonstrate **how performance data can support exception-based reporting**. Any operational deployment would require data reconciliation, formula validation, risk calibration and integration with an actual P6 schedule.
 
-This is a portfolio prototype. Some progress and cost data were simulated to demonstrate the project controls workflow.
+**Tools:** Python, Pandas, NumPy, Matplotlib, EVM and Primavera P6 schedule concepts.
 
-The Monte Carlo simulation uses the maximum simulated activity duration as a simplified proxy for project completion duration. A full production-grade schedule risk analysis would require Primavera activity relationships, calendars, constraints, and critical path network logic.
-
-## Purpose
-
-This project was built to demonstrate how project controls data can be transformed into performance insights, probabilistic forecasts, and management recommendations.
+**Status:** Research prototype V03 with simulated inputs and simplified forecasting; not a live client delivery.

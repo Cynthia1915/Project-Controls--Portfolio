@@ -1,300 +1,108 @@
-# 🏗️ Hyperscale Data Center — Project Controls Intelligence
+# Hyperscale Data Center | Integrated Project Controls
 
-> **End-to-end Project Controls portfolio project integrating Primavera P6, Earned Value Management, performance analytics, forecasting, and executive BI reporting.**
+**Primavera P6 · Planning & Scheduling · Earned Value Management · Forecasting · Executive Reporting**
 
-This simulated project demonstrates how a detailed project schedule can be transformed into **management-level performance intelligence** across multiple reporting periods.
+> **Management question:** How is project delivery performance changing, what does the latest forecast indicate, and where should management intervene?
 
----
+This independent **synthetic project-controls case study** connects baseline planning, progress updates, cost and schedule performance analysis, forecasting and management reporting for a hyperscale data-center development.
 
-## 🔄 End-to-End Project Controls Workflow
-
-```mermaid
-flowchart LR
-    A["📅 Primavera P6<br/>Planning & Baseline"] --> B["🔄 Progress Updates<br/>Update 01 → Update 02"]
-    B --> C["⚙️ Project Controls<br/>Analysis"]
-    C --> D["📈 Performance &<br/>Forecast Intelligence"]
-    D --> E["📊 Looker Studio<br/>Executive Dashboard"]
-    E --> F["🎯 Management<br/>Insights"]
-```
-
-### From schedule development to management decision-making
-
-**PLAN → UPDATE → ANALYZE → FORECAST → REPORT → DECIDE**
+[← Portfolio overview](../README.md) · [Schedule evidence](./primavera/) · [Dashboard gallery](./dashboard/) · [Methodology](./docs/methodology.md) · [Reporting data](./data/)
 
 ---
 
-## 🎯 Project Objective
+## Executive project profile
 
-The objective is to move beyond static schedule reporting and create a Project Controls workflow capable of answering four key questions:
+| Parameter | Case-study basis |
+| --- | --- |
+| Project | Hyperscale Data Center Development |
+| Project ID | DC-HYP-FINAL-6 |
+| Schedule | **808 activities · 1,406 relationships** |
+| Cost baseline | **USD 120 million** (synthetic) |
+| Baseline project start | **05 January 2026** |
+| Baseline readiness-for-service (RFS) | **15 July 2027** |
+| Update 01 data date | **31 January 2026** |
+| Update 02 data date | **28 February 2026** |
+| Reported current RFS forecast | **19 July 2027** |
+| Tools | Primavera P6, Excel, Python/Pandas (data-processing workflow), Google Sheets, Looker Studio |
 
-> **Where is the project now?**  
-> **How is performance changing?**  
-> **Where is the project forecast to finish?**  
-> **What requires management attention?**
+**Project objective:** demonstrate a repeatable reporting workflow that helps a project-controls team move from a static schedule snapshot to **performance trends, forecast interpretation and prioritized actions**.
 
----
+## 01 — Planning & baseline control
 
-# 01 — PLAN | Primavera P6
+The Primavera P6 schedule was structured around engineering, procurement, construction, electrical/mechanical systems, utility energization, testing and commissioning, and handover.
 
-The project begins with the development of a detailed **Primavera P6 baseline schedule**.
+- Structured WBS, milestones, calendars and activity relationships.
+- Reviewed schedule logic, critical-path continuity and float exposure.
+- Developed a baseline readiness-for-service milestone for subsequent comparison.
 
-```text
-                    P6 BASELINE
-                         │
-          ┌──────────────┼──────────────┐
-          ▼              ▼              ▼
-         WBS         ACTIVITIES       LOGIC
-          │              │              │
-          ▼              ▼              ▼
-      WORK PACKAGES   MILESTONES   RELATIONSHIPS
-          │              │              │
-          └──────────────┼──────────────┘
-                         ▼
-                  CRITICAL PATH
-                         │
-                         ▼
-                    TOTAL FLOAT
-```
+**Evidence:** [Baseline schedule summary](./primavera/baseline-schedule-summary.pdf)
 
-The baseline establishes the original project plan against which future performance can be evaluated.
+## 02 — Progress monitoring
 
-### Primavera P6 Documentation
+Successive reporting periods support assessment of performance movement rather than a single status point.
 
-📁 **`primavera-p6/`**
+| Reporting milestone | Data date | Purpose |
+| --- | --- | --- |
+| Baseline | 05 Jan 2026 | Planned delivery reference |
+| Update 01 | 31 Jan 2026 | Initial progress and forecast comparison |
+| Update 02 | 28 Feb 2026 | Subsequent period and emerging performance trends |
 
-- Baseline schedule summary
-- WBS and activity structure
-- Project milestones
-- Schedule logic
-- Critical path
-- Total float
-- Baseline dates
+[Update 01 schedule summary](./primavera/update-01-schedule-summary.pdf) · [Update 02 schedule summary](./primavera/update-02-schedule-summary.pdf)
 
----
+## 03 — Earned value & forecast intelligence
 
-# 02 — UPDATE | Multi-Period Reporting
+The analysis brings together:
 
-Project performance is tracked across successive reporting periods rather than through a single static snapshot.
+| Cost / EVM | Schedule | Forward-looking measures |
+| --- | --- | --- |
+| BAC, PV, EV, AC | Critical and low-float exposure | EAC, ETC, VAC |
+| CPI, SPI, CV, SV | Milestone forecast movement | Cost-to-complete scenarios |
+| Period-on-period performance | Design/procurement interfaces | Management alerts |
 
-```text
-        BASELINE
-            │
-            ▼
-      ┌───────────┐
-      │ UPDATE 01 │
-      └─────┬─────┘
-            │
-            ▼
-      ┌───────────┐
-      │ UPDATE 02 │
-      └─────┬─────┘
-            │
-            ▼
-    PERFORMANCE TREND
-```
+**Methodological distinction:** the cost baseline is synthetic, and the EVM/reporting workflow uses external analytical calculations. It should **not** be interpreted as verified native Primavera P6 earned-value output. KPI ratios are computed from **aggregated EV, AC and PV**, rather than summing activity-level ratios. Reporting-period controls are needed to avoid double-counting updates.
 
-Each reporting period captures changes in schedule and project performance, allowing trends and emerging issues to be identified.
+See [methodology and limitations](./docs/methodology.md).
 
----
+## 04 — Executive dashboard
 
-# 03 — ANALYZE | Project Controls Intelligence
+[![Executive Project Controls overview](./dashboard/01-executive-overview.png)](./dashboard/)
 
-Project data is transformed into measurable cost, schedule, and performance indicators.
+| Executive overview | Cost & forecasting | Schedule & risk |
+| --- | --- | --- |
+| [View dashboard](./dashboard/01-executive-overview.png) | [View dashboard](./dashboard/02-cost-forecast.png) | [View dashboard](./dashboard/03-schedule-risk.png) |
 
-```text
-                     PROJECT DATA
-                          │
-          ┌───────────────┼───────────────┐
-          ▼               ▼               ▼
-        COST           SCHEDULE        PERFORMANCE
-          │               │               │
-      PV / EV / AC      Critical         CPI
-          │            Activities         │
-          │               │              SPI
-          │            Low Float           │
-          │               │               │
-          └───────────────┼───────────────┘
-                          ▼
-                  PROJECT CONTROLS
-                     INTELLIGENCE
-```
+The dashboard is designed to answer: **Where are we? What changed? What is forecast? What needs action?**
 
-### Key Performance Indicators
+## 05 — Management interpretation
 
-| Cost & EVM | Schedule | Forecast |
-|---|---|---|
-| Planned Value (PV) | Critical Activities | EAC |
-| Earned Value (EV) | Low-Float Activities | ETC |
-| Actual Cost (AC) | Negative Float | VAC |
-| CPI | Forecast Finish | Forecast Scenarios |
-| SPI | Schedule Exposure | Management Alerts |
+**Illustrative findings from the modeled updates:**
+
+1. **Protect design-to-procurement interfaces.** Delays to architectural/electrical design release can affect long-lead transformer procurement and downstream electrical milestones.
+2. **Monitor readiness for energization and commissioning.** Equipment delivery and integrated testing create important schedule interfaces that warrant active follow-up.
+3. **Interpret CPI/SPI together with schedule evidence.** Near-target performance indices do not remove critical-path or interface exposure.
+4. **Review cost forecasts as scenarios, not commitments.** Synthetic progress and cost assumptions make EAC values useful for demonstrating analytical methods, not predicting a real project outcome.
+
+**Management decision supported:** prioritize design-release follow-up, track long-lead procurement milestones, and monitor forecast movement and schedule quality at each reporting date.
 
 ---
 
-# 04 — FORECAST | Looking Forward
+## Evidence and repository navigation
 
-The project does not stop at reporting current performance.
+| Folder | Contents |
+| --- | --- |
+| [`primavera/`](./primavera/) | Baseline and update schedule PDFs |
+| [`dashboard/`](./dashboard/) | Three executive dashboard screenshots |
+| [`data/`](./data/) | Case-study reporting workbook and data notes |
+| [`docs/`](./docs/) | Methodology and modeling limitations |
+| [`notebooks/`](./notebooks/) | Data-processing workflow notes; **no executable notebook is currently committed here** |
 
-Multiple forecasting scenarios are evaluated to understand potential project outcomes.
+### Status and limitations
 
-```text
-                 CURRENT PERFORMANCE
-                         │
-          ┌──────────────┼──────────────┐
-          ▼              ▼              ▼
-     BUDGET RATE      CPI BASED      CPI + SPI
-          │              │              │
-          └──────────────┼──────────────┘
-                         ▼
-                    EAC / ETC / VAC
-                         │
-                         ▼
-                  FORECAST OUTCOME
-```
+- **Available:** P6 schedule summaries, reporting workbook, executive dashboard screenshots.
+- **Documented analytical workflow:** P6 → structured reporting data → EVM/forecast analysis → dashboard.
+- **Not currently available in this repository:** a complete executable, reproducible Python notebook for the Data Center workflow.
+- **Quality control before external presentation:** verify dashboard figures, data-date filters, forecast labels and management text against the same reporting period.
 
-This creates a forward-looking view of project performance and potential cost-at-completion outcomes.
+**Disclosure:** This is a synthetic portfolio case study. Dates, budgets, progress and analysis illustrate project-controls methods; they do not represent a real client's performance or an independently verified forecast.
 
----
-
-# 05 — REPORT | Executive Dashboard
-
-The final reporting layer transforms Project Controls information into an executive-level view using **Looker Studio**.
-
-```text
-                   PROJECT CONTROLS DATA
-                           │
-                           ▼
-                    LOOKER STUDIO
-                           │
-            ┌──────────────┼──────────────┐
-            ▼              ▼              ▼
-        EXECUTIVE       COST &         SCHEDULE
-         OVERVIEW       FORECAST        & RISK
-            │              │              │
-            └──────────────┼──────────────┘
-                           ▼
-                    MANAGEMENT VIEW
-```
-
-## 📊 Executive Project Controls Dashboard
-
-![Executive Project Controls Dashboard](dashboard/01-executive-overview.png)
-
-### Dashboard Views
-
-**Executive Overview**
-- BAC, EV and AC
-- CPI & SPI
-- Forecast EAC
-- Cost performance
-- Schedule exposure
-- Management alerts
-
-**Cost & Forecast**
-- EAC
-- ETC
-- VAC
-- Forecast scenarios
-- Cost-at-completion analysis
-
-**Schedule & Risk**
-- Critical activities
-- Low-float activities
-- Negative float
-- SPI
-- Forecast finish
-- Schedule exposure
-
----
-
-# 🧠 From Data to Decision
-
-```mermaid
-flowchart LR
-    A["P6 Schedule"] --> B["Project Data"]
-    B --> C["Performance Analysis"]
-    C --> D["KPIs"]
-    D --> E["Forecast"]
-    E --> F["Executive Dashboard"]
-    F --> G["Management Insight"]
-```
-
-The objective is not simply to visualize data.
-
-The objective is to transform **schedule and performance data into information that supports project-control decisions.**
-
----
-
-# 🛠️ Technology Stack
-
-| Project Controls Layer | Technology |
-|---|---|
-| Planning & Scheduling | **Primavera P6** |
-| Earned Value Management | **EVM** |
-| Data Processing | **Python / Pandas** |
-| Reporting Data Layer | **Google Sheets** |
-| Business Intelligence | **Looker Studio** |
-| Portfolio & Version Control | **GitHub** |
-
----
-
-# 📁 Repository Structure
-
-```text
-Hyperscale-Data-Center/
-│
-├── README.md
-│
-├── primavera-p6/
-│   └── baseline-schedule-summary.pdf
-│
-├── dashboard/
-│   ├── README.md
-│   ├── 01-executive-overview.png
-│   ├── 02-cost-forecast.png
-│   └── 03-schedule-risk.png
-│
-├── notebooks/
-│   └── project-controls-analysis.ipynb
-│
-└── data/
-    └── project-controls-data.xlsx
-```
-
----
-
-# 🚀 Project Development
-
-```text
-PRIMAVERA P6 BASELINE       ✅
-          │
-          ▼
-MULTI-PERIOD UPDATES        ✅
-          │
-          ▼
-EARNED VALUE ANALYSIS       ✅
-          │
-          ▼
-FORECAST SCENARIOS          ✅
-          │
-          ▼
-EXECUTIVE BI DASHBOARD      ✅
-          │
-          ▼
-PYTHON AUTOMATION           🔄
-          │
-          ▼
-ADVANCED RISK INTELLIGENCE  ⏳
-```
-
-The project is continuing to evolve toward deeper **schedule analytics, automation, risk intelligence, and management exception reporting**.
-
----
-
-## 📌 Disclaimer
-
-This is a **simulated Hyperscale Data Center project** developed as a portfolio case study to demonstrate capabilities in:
-
-**Project Controls • Primavera P6 • Earned Value Management • Schedule Analysis • Forecasting • Data Analytics • BI Reporting • Automation**
-
-It does not represent a live client project.
+[← Back to portfolio](../README.md)

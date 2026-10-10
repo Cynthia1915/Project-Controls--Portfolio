@@ -1,57 +1,45 @@
-# Primavera P6 Baseline Risk Intelligence Engine V1
+# Primavera P6 Baseline Risk Intelligence | Prototype V1
 
-## Overview
+**Baseline Assurance · Schedule Vulnerability · Risk Prioritization**
 
-A PMO analytics project developed to identify high-risk activities and vulnerable work packages before project execution begins.
+[← Portfolio](../README.md)
 
-Traditional schedule reviews focus on the critical path. This project extends that approach by evaluating activity risk, dependency impact, package exposure, and schedule vulnerability across an entire Primavera P6 baseline schedule.
+## Management question
 
-## Methodology
+**Which work packages and schedule activities warrant attention before execution begins, beyond the conventional critical-path list?**
 
-### Activity Risk Engine
+This independent **portfolio prototype** applies a transparent weighted scoring approach to Primavera P6 baseline information to highlight potential schedule exposure.
 
-Activity Risk Score =
+## Approach
 
-* 40% Float Risk
-* 25% Dependency Impact
-* 15% Duration Exposure
-* 10% Package Risk
-* 10% Gateway Risk
+| Activity risk component | Weight |
+| --- | ---: |
+| Float risk | 40% |
+| Dependency impact | 25% |
+| Duration exposure | 15% |
+| Package risk | 10% |
+| Gateway risk | 10% |
 
-### Package Exposure Engine
+A separate package exposure assessment considers critical density, number of critical activities, successor impact and remaining duration.
 
-Package Exposure Score based on:
+**Interpretation:** These weights are **heuristic demonstration assumptions**, not calibrated failure probabilities or industry-certified schedule quality thresholds.
 
-* Critical Density
-* Critical Activities
-* Successor Impact
-* Remaining Duration
+## Illustrative results
 
-## Tools
+The original V1 case-study output reported **4,218 activities screened**, **197 critical activities** and **9 executive-priority risk items**. It highlighted structural work and MEP approval interfaces as potential areas for management review.
 
-* Primavera P6
-* Python
-* Pandas
-* Google Colab
+These figures are **model outputs from an independent portfolio exercise**, not audited client project outcomes. They should be reproduced from the accompanying artifacts before reuse in a formal presentation.
 
-## Results
+## Available evidence
 
-* 4,218 activities analyzed
-* 197 critical activities identified
-* 9 executive-level risks prioritized
-* Steel Structure Works critical density ≈ 49%
-* MEP approval identified as a major schedule driver
+- [Executive presentation](./Carousel/)
+- [Analysis notebook](./Notebook/)
+- [Screenshots](./Screenshots/)
 
-## Repository Structure
+## Recommended management use
 
-* Carousel → Executive presentation
-* Notebook → Full Python implementation
-* Screenshots → Key outputs and findings
+Use the screening as a **triage mechanism**: review high-scoring activities, validate P6 logic and calendars, investigate interface dependencies, and assign owners to actions. The score should **not** replace critical-path analysis, formal schedule assurance or project-specific risk workshops.
 
-## Future Enhancements
+**Tools:** Primavera P6 concepts, Python, Pandas, Google Colab.
 
-* Interactive PMO Dashboard
-* Portfolio-Level Risk Analysis
-* Predictive Schedule Intelligence
-* Streamlit Web Application
-
+**Status:** Portfolio prototype V1; simulated/model-based demonstration, not a live-client assignment.

@@ -1,30 +1,23 @@
-# Project Controls Analytics Notebooks
+# Data Processing and Automation | Status
 
-Python / Google Colab notebooks supporting the Hyperscale Data Center Project Controls portfolio project.
+[← Case study](../README.md)
 
-## Workflow
+The intended project-controls reporting workflow is:
 
-Primavera P6 XER  
-↓  
-Python / Pandas  
-↓  
-Schedule & Earned Value Analysis  
-↓  
-Historical Reporting  
-↓  
-Google Sheets  
-↓  
-Looker Studio
+```text
+Primavera P6 baseline / update
+             ↓
+  Data extraction and validation
+             ↓
+ EVM, schedule and forecast analysis
+             ↓
+      Reporting dataset
+             ↓
+ Google Sheets / Looker Studio
+```
 
-## Capabilities
+**Repository status:** no executable Data Center Python notebook is currently committed in this folder. The workflow above describes the intended architecture, **not a reproducible automation deliverable**.
 
-- XER schedule processing
-- Earned Value calculations
-- CPI & SPI analysis
-- Multi-period reporting
-- Critical and low-float analysis
-- Forecast scenarios
-- Management exception identification
-- Reporting automation
+For available evidence, see the [reporting workbook](../data/), [schedule summaries](../primavera/) and [dashboard screenshots](../dashboard/).
 
-> This portfolio project uses simulated data. Credentials and private configuration are excluded.
+Future publication of a notebook should include input schema, setup steps, calculations, validation checks and reproducibility instructions, with credentials excluded.

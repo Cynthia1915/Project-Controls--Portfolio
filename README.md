@@ -9,7 +9,8 @@ An independent portfolio of engineering-led case studies demonstrating the integ
 
 **Professional background:** Civil Engineering · Master's in Engineering Management  
 **Career focus:** Project Controls Engineer / Analyst · Planning & Scheduling Engineer · PMO Analyst · Digital Project Controls  
-**Geographic focus:** United Arab Emirates and Saudi Arabia
+**Geographic focus:** United Arab Emirates and Saudi Arabia  
+**Quick recruiter briefing:** [Read the one-page Project Controls overview](./RECRUITER-OVERVIEW.md)
 
 ---
 
