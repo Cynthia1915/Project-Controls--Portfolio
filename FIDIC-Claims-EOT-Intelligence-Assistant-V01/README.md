@@ -1,292 +1,54 @@
-# FIDIC Claims & Extension of Time (EOT) Intelligence Assistant V01
+# FIDIC Claims & EOT Intelligence | Exploratory Decision-Support Prototype
 
-## Overview
+**Delay Event Screening · Notice and Evidence Tracking · Claims Readiness**
 
-This project is a proof-of-concept analytics assistant for construction claims and Extension of Time (EOT) assessment using project controls data and FIDIC-based logic.
+[← Portfolio](../README.md)
 
-The objective is to support early identification of delay events, potential EOT entitlement, contractual risk, and required follow-up actions.
+## Management question
 
-This project does not replace contractual, legal, or claims expert judgment. It is designed as a decision-support tool.
+**Which reported delay events need immediate evidence gathering, notice review and specialist assessment?**
 
----
+This independent portfolio proof of concept combines a modeled performance dataset with a delay-event register to produce **screening classifications and follow-up recommendations**.
 
-## Business Problem
+It is intended to support **early documentation triage**, **not** determine legal entitlement, compensability or the number of extension-of-time days.
 
-Construction projects often experience delays caused by different parties or events.
+## Inputs
 
-Project teams need to quickly understand:
+- Modeled project performance data: activity identifiers, planned/actual progress, performance indicators, float and baseline durations.
+- Delay register: event descriptions, related activities, delay categories, notice status and evidence availability.
 
-* Which activities were affected?
-* What type of delay occurred?
-* Who may be responsible?
-* Could the delay potentially justify an EOT?
-* Was notice issued?
-* Is evidence available?
-* What action should management take?
+See the [data folder](./Data/).
 
----
-
-## Input Files
-
-### 1. Performance Dataset
-
-File:
+## Screening workflow
 
 ```text
-Performance_Dataset_June2026.xlsx
+Performance data + delay register
+                ↓
+     Event / activity matching
+                ↓
+     Rule-based event category
+                ↓
+     Notice and evidence review
+                ↓
+   Documentation priority / actions
 ```
 
-Used to provide:
+The original model groups events under employer, contractor, exceptional event, third-party or unknown categories. These categories are **only preliminary prompts for review**.
 
-* Activity ID
-* Activity code
-* Activity name
-* Planned progress
-* Actual progress
-* Progress variance
-* SPI
-* CPI
-* Float
-* Baseline duration
+**Do not interpret a label such as “potential EOT” or a high confidence score as an entitlement finding.** FIDIC rights and obligations depend on the particular contract edition and amendments, facts, critical-path impact, concurrency, causation, notice requirements and applicable law.
 
----
+## Outputs and evidence
 
-### 2. Delay Register
+- [Prototype notebook](./notebook/)
+- [Illustrative outputs](./outputs/)
+- [Screenshots](./screenshots/)
 
-File:
-
-```text
-Delay_Register.xlsx
-```
-
-Used to provide:
-
-* Delay ID
-* Related activity
-* Delay event description
-* Delay days
-* Delay type
-* Notice status
-* Evidence availability
-
----
-
-## Delay Types Used
-
-The model classifies delays into:
-
-* Employer
-* Contractor
-* Exceptional Event
-* Third Party
-* Unknown
-
----
-
-## FIDIC-Based Logic
-
-### Employer Delay
-
-Typical examples:
-
-* Late drawing approval
-* Late access
-* Late approvals
-* Employer instruction changes
-
-Model output:
-
-```text
-Potential EOT = Yes
-```
-
----
-
-### Contractor Delay
-
-Typical examples:
-
-* Equipment breakdown
-* Poor planning
-* Late procurement
-* Subcontractor underperformance
-
-Model output:
-
-```text
-Potential EOT = No
-```
-
----
-
-### Exceptional Event
-
-Typical examples:
-
-* Severe rainfall
-* Flooding
-* Government restrictions
-* Force majeure-type events
-
-Model output:
-
-```text
-Potential EOT = Potential
-```
-
----
-
-### Third Party / Unknown
-
-Model output:
-
-```text
-Potential EOT = Requires Review
-```
-
----
-
-## Contractual Risk Logic
-
-The model checks whether:
-
-* Notice was issued
-* Evidence is available
-
-### High Risk
-
-```text
-No notice + No evidence
-```
-
-### Medium Risk
-
-```text
-Notice missing OR evidence missing
-```
-
-### Low Risk
-
-```text
-Notice issued + evidence available
-```
-
----
-
-## EOT Confidence Logic
-
-### High Confidence
-
-Potential EOT is Yes and documentation risk is low.
-
-### Medium Confidence
-
-Potential EOT exists but notice or evidence is incomplete.
-
-### Low Confidence
-
-Potential EOT is weak or documentation is insufficient.
-
----
-
-## Outputs
-
-The model produces:
-
-* Claims intelligence table
-* Potential EOT classification
-* Contractual risk level
-* EOT confidence level
-* Recommended actions
-
----
-
-## Example Recommendations
-
-* Issue contractual notice
-* Collect supporting evidence
-* Perform critical path analysis
-* Prepare EOT submission
-* Review contractual entitlement
-* Monitor and document delay event
-
----
-
-## Project Workflow
-
-```text
-Performance Dataset
-        +
-Delay Register
-        ↓
-Merge Activity and Delay Data
-        ↓
-Classify Delay Type
-        ↓
-Assess Potential EOT
-        ↓
-Evaluate Notice and Evidence
-        ↓
-Assign Contractual Risk
-        ↓
-Generate Recommendations
-```
-
----
-
-## Technologies Used
-
-* Python
-* Pandas
-* NumPy
-* Google Colab
-* Excel
-* Project Controls concepts
-* FIDIC-based delay classification logic
-
----
-
-## Assumptions
-
-* Delay events were created for portfolio demonstration purposes.
-* Delay types are simplified.
-* The model uses rule-based logic.
-* The model does not perform full legal entitlement assessment.
-* The model does not perform full critical path delay analysis.
-
----
+The outputs may help a project-controls or contracts team prioritize **notice review, event records, contemporaneous evidence and specialist delay analysis**.
 
 ## Limitations
 
-This is a Version 1 proof of concept.
+This V01 **does not** conduct a forensic CPM delay analysis, time impact analysis, as-planned versus as-built comparison, concurrency assessment, contract-specific clause interpretation or legal entitlement determination.
 
-It does not include:
+**Professional boundary:** The tool is a demonstration of analytics and documentation workflow, not legal advice, a FIDIC-compliant claims assessment or a substitute for qualified planning/claims professionals.
 
-* Detailed FIDIC clause mapping
-* Full critical path impact analysis
-* Concurrent delay analysis
-* As-planned versus as-built analysis
-* Time impact analysis
-* Contractual notice period checking
-* Legal interpretation
-
----
-
-## Future Improvements for V02
-
-Future versions could include:
-
-* FIDIC clause reference mapping
-* Critical path impact assessment
-* Delay notice deadline tracker
-* Concurrent delay detection
-* Evidence checklist automation
-* EOT days calculation
-* Claim report generation
-* Dashboard for contractual exposure
-
----
-
-## Purpose
-
-The purpose of this project is to demonstrate how construction management, project controls, contract management, and analytics can be combined into a simple decision-support assistant for delay and EOT assessment.
+**Status:** Synthetic proof-of-concept portfolio project.
