@@ -60,6 +60,20 @@ class NetworkTests(unittest.TestCase):
         self.assertLessEqual(a["p80_relative_work_hours"], a["p90_relative_work_hours"])
 
 
+class XerAuditTests(unittest.TestCase):
+    def test_invalid_relationship_flagged(self):
+        t = sample()
+        t['TASKPRED'][0]['pred_task_id'] = 'missing'
+        summary, findings = audit(t)
+        self.assertEqual(summary['checks']['INVALID_REFERENCE'], 1)
+
+    def test_cycle_flagged(self):
+        t = sample()
+        t['TASKPRED'].append({'pred_task_id': '2', 'task_id': '1', 'pred_type': 'PR_FS', 'lag_hr_cnt': '0'})
+        summary, findings = audit(t)
+        self.assertEqual(summary['checks']['CYCLIC_LOGIC'], 1)
+
+
 class EvmTests(unittest.TestCase):
     def test_ratios_and_forecast(self):
         rows = [{"activity_id": "A", "data_date": "2026-01-31", "bac": "100", "pv": "60", "ev": "40", "ac": "50"},
