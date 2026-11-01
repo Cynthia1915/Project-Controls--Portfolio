@@ -78,6 +78,26 @@ This case study examines how activity-duration uncertainty can be translated int
 
 ---
 
+## Featured case study — Residential Tower Schedule Recovery
+### Primavera P6 · Progress Updates · Recovery Analysis · Executive Decision Support
+
+**Management challenge:** An updated simulated 15-story residential tower schedule forecasts completion **18 calendar days late**. Two alternative recovery strategies are evaluated against the same baseline.
+
+| Scenario | Forecast finish | Delay vs baseline | Days recovered |
+|---|---|---:|---:|
+| Baseline | 13 May 2028 | 0 | — |
+| Update 01 | 31 May 2028 | +18 | — |
+| Recovery A — duration compression | 16 May 2028 | +3 | 15 |
+| Recovery B — logic resequencing | 18 May 2028 | +5 | 13 |
+
+**Decision insight:** Recovery A produces the earlier modeled finish without changing the dependency set, but its acceleration productivity, resources and cost remain unvalidated. Recovery B introduces overlap-related interface risks. The recommended next step is a controlled feasibility and cost review—not immediate implementation.
+
+**Evidence:** Four original Primavera P6 XER files; 265 activities per scenario; Python extraction and reproducible comparison; executive risk and decision brief. Simulated schedules, not live project results.
+
+**[Explore the Residential Tower recovery case study](./Residential-Tower-Project-Controls/)**
+
+---
+
 ## Featured case study 03 — Schedule Health & Assurance
 ### Primavera P6 Schedule Quality | Planning Integrity · Exceptions · Corrective Actions
 
