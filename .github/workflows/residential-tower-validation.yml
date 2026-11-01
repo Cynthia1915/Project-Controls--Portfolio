@@ -1,0 +1,28 @@
+name: Residential Tower schedule validation
+on:
+  pull_request:
+    paths:
+      - 'Residential-Tower-Project-Controls/**'
+      - '.github/workflows/residential-tower-validation.yml'
+  push:
+    paths:
+      - 'Residential-Tower-Project-Controls/**'
+      - '.github/workflows/residential-tower-validation.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run scenario regression tests
+        working-directory: Residential-Tower-Project-Controls
+        run: python -m unittest discover -s tests -v
+      - name: Generate validated CSVs
+        working-directory: Residential-Tower-Project-Controls
+        run: python 02_Python_ETL/analyze_scenarios.py --input 01_P6_Exports --output 03_Processed_Data
+      - uses: actions/upload-artifact@v4
+        with:
+          name: residential-tower-validated-csv
+          path: Residential-Tower-Project-Controls/03_Processed_Data/*.csv
