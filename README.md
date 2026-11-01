@@ -94,7 +94,9 @@ This case study examines how activity-duration uncertainty can be translated int
 
 **Evidence:** Four original Primavera P6 XER files; 265 activities per scenario; Python extraction and reproducible comparison; executive risk and decision brief. Simulated schedules, not live project results.
 
-**[Explore the Residential Tower recovery case study](./Residential-Tower-Project-Controls/)**
+[![Residential Tower — Executive Schedule Dashboard](./Residential-Tower-Project-Controls/04_Dashboard/executive-preview.svg)](./Residential-Tower-Project-Controls/04_Dashboard/)
+
+**[Explore the Residential Tower recovery case study](./Residential-Tower-Project-Controls/)** · [**Executive dashboard**](./Residential-Tower-Project-Controls/04_Dashboard/)
 
 ---
 

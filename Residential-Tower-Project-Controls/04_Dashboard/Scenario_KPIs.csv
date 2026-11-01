@@ -1,0 +1,5 @@
+Scenario,Forecast_Finish,Delay_vs_Baseline_Calendar_Days,Recovered_vs_Update_Calendar_Days,Activities,Relationships,Completed,In_Progress,Not_Started
+Baseline,2028-05-13,0,,265,362,0,0,265
+Update 01,2028-05-31,18,,265,362,7,3,255
+Recovery A,2028-05-16,3,15,265,362,7,3,255
+Recovery B,2028-05-18,5,13,265,363,7,3,255

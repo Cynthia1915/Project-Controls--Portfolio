@@ -6,6 +6,16 @@
 
 > **Management question:** An updated schedule forecasts completion 18 calendar days later than baseline. Which recovery intervention offers the stronger finish-date improvement, and what must be validated before management can authorize it?
 
+## Executive dashboard
+
+[![Residential Tower — executive schedule dashboard](./04_Dashboard/executive-preview.svg)](./04_Dashboard/)
+
+**[Explore the interactive four-page dashboard and KPI exports](./04_Dashboard/)**
+
+The dashboard communicates the baseline-to-update delay, both recovery scenarios, progress counts, duration and logic interventions, and management approval gates. It is a self-contained HTML dashboard that can be opened locally; a public GitHub Pages deployment is not yet configured.
+
+---
+
 ## Executive findings
 
 | Metric | Baseline | Update 01 | Recovery A | Recovery B |

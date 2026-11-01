@@ -1,0 +1,9 @@
+Scenario,Intervention_Type,Activity_or_Interface,Change,Hours,Comment
+Recovery A,Duration compression,EXC-030,Reduction,-16,Excavation basement 1
+Recovery A,Duration compression,EXC-040,Reduction,-16,Excavation basement 2 and dewatering
+Recovery A,Duration compression,TST-020,Reduction,-24,Integrated MEP functional testing
+Recovery A,Duration compression,TST-050,Reduction,-24,Final snag closeout manuals and training
+Recovery B,Logic overlap,TST-010 to TST-020,FS to SS,80,Positive lag in hours
+Recovery B,Logic overlap,TST-020 to TST-030,FS to SS,112,Positive lag in hours
+Recovery B,Logic overlap,TST-040 to TST-050,FS to SS,80,Positive lag in hours
+Recovery B,Logic added,TST-040 to M-HANDOVER,FS,0,Additional handover gate
