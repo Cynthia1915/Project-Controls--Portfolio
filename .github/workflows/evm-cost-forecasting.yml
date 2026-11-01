@@ -1,0 +1,27 @@
+name: EVM cost forecasting validation
+on:
+  push:
+    paths:
+      - 'EVM-Cost-Forecasting/**'
+      - '.github/workflows/evm-cost-forecasting.yml'
+  pull_request:
+    paths:
+      - 'EVM-Cost-Forecasting/**'
+      - '.github/workflows/evm-cost-forecasting.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run regression tests
+        run: python -m unittest discover -s EVM-Cost-Forecasting/tests -v
+      - name: Generate deterministic EVM outputs
+        run: python EVM-Cost-Forecasting/src/evm.py --output EVM-Cost-Forecasting/outputs
+      - name: Upload report-ready datasets
+        uses: actions/upload-artifact@v4
+        with:
+          name: evm-cost-forecasting-datasets
+          path: EVM-Cost-Forecasting/outputs/
