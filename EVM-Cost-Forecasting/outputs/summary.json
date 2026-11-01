@@ -1,0 +1,26 @@
+{
+  "case_id": "EVM-CF-001",
+  "synthetic": true,
+  "latest": {
+    "month": 12,
+    "period_pv": 6900000,
+    "period_ev": 5800000,
+    "period_ac": 7200000,
+    "bac": 50000000,
+    "pv": 50000000,
+    "ev": 43700000,
+    "ac": 52500000,
+    "cv": -8800000,
+    "sv": -6300000,
+    "cpi": 0.8323809523809523,
+    "spi": 0.874,
+    "eac_cpi": 60068649.88558353,
+    "eac_remaining_at_budget": 58800000,
+    "eac_cpi_spi": 61159782.47778435,
+    "etc_cpi": 7568649.885583527,
+    "vac_cpi": -10068649.885583527,
+    "tcpi_bac": null
+  },
+  "months": 12,
+  "accounts": 5
+}

@@ -26,6 +26,16 @@ An independent portfolio of engineering-led case studies demonstrating the integ
 
 ---
 
+## Featured case study — Earned Value Management & Cost Forecasting
+
+[![EVM executive dashboard preview](./EVM-Cost-Forecasting/dashboard/preview.svg)](./EVM-Cost-Forecasting/)
+
+**[Explore the EVM & Cost Forecasting case study](./EVM-Cost-Forecasting/)** · [Executive dashboard](./EVM-Cost-Forecasting/dashboard/index.html) · [Python model](./EVM-Cost-Forecasting/src/evm.py)
+
+A reproducible **synthetic USD 50M construction cost-control exercise** with twelve monthly reporting periods, PV/EV/AC measurement, CPI/SPI and cost-variance trends, three conditional EAC forecasting methods, automated formula checks, and an executive decision brief. Clearly distinguishes earned-value schedule metrics from CPM completion dates and avoids claiming real project cost data.
+
+---
+
 ## Featured case study 01 — Hyperscale Data Center
 ### Integrated Project Controls | Primavera P6 · EVM · Forecasting · Executive Reporting
 
