@@ -27,3 +27,7 @@ The HTML contains a fixed, source-grounded snapshot rather than a live data conn
 ### Publishing a hosted URL
 
 The dashboard is committed to GitHub, but a public GitHub Pages site is **not yet configured**. A repository administrator can enable GitHub Pages, or the HTML can be hosted as a static page. No hosted URL should be claimed until it is verified.
+
+## Visual design update
+
+The HTML dashboard uses a **Looker Studio–inspired light report layout** with white cards, blue tabs, table styling and a scenario-focus selector. It is **not a native Looker Studio report**, nor is the selector a live P6 or Google Sheets connection. The selector highlights one recovery scenario in the delay chart; the other report data remain visible for comparison. The underlying KPI values and schedule integrity qualifications are unchanged.

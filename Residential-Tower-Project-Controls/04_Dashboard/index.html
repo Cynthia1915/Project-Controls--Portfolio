@@ -4,16 +4,36 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Residential Tower | Project Controls Executive Dashboard</title>
 <style>
-:root{--bg:#0b1220;--panel:#142136;--line:#2b3c53;--text:#f0f5fc;--muted:#a8b9cc;--cyan:#57c6df;--amber:#ffcb7a;--green:#8bdbb2;--red:#ffa3a3}
+:root{--bg:#f4f7fb;--panel:#ffffff;--line:#dfe5ee;--text:#243247;--muted:#63758c;--cyan:#2563eb;--amber:#e6a23c;--green:#20a67a;--red:#df5b64}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
 header,main,footer{max-width:1220px;margin:auto;padding:24px}header{padding-top:36px}h1{font-size:clamp(26px,4vw,42px);line-height:1.16;margin:8px 0}h2{font-size:21px;margin:0 0 16px}h3{font-size:16px;margin:0 0 10px}p{margin:8px 0 16px}a{color:var(--cyan)}.eyebrow{letter-spacing:.16em;text-transform:uppercase;font-weight:700;font-size:12px;color:var(--cyan)}.muted,small{color:var(--muted)}.sub{max-width:780px;color:var(--muted)}
-nav{display:flex;gap:8px;flex-wrap:wrap;padding:14px 0 24px}button{cursor:pointer;background:#1b2a42;border:1px solid var(--line);color:var(--text);padding:11px 15px;border-radius:9px;font:inherit}button[aria-selected="true"]{background:#1b4861;border-color:var(--cyan)}button:focus-visible{outline:3px solid var(--cyan)}
-.page[hidden]{display:none}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.metric,.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}.metric span{display:block;color:var(--muted);font-size:13px}.metric strong{display:block;font-size:clamp(23px,3vw,35px);line-height:1.25;margin:7px 0}.metric em{font-style:normal;color:var(--muted);font-size:12px}.layout{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;margin-top:16px}.stack{display:grid;gap:16px}.barrow{display:grid;grid-template-columns:110px 1fr 60px;align-items:center;gap:10px;margin:15px 0}.track{height:22px;background:#26374e;border-radius:5px;overflow:hidden}.fill{height:100%;background:var(--cyan)}.fill.red{background:var(--red)}.fill.green{background:var(--green)}.fill.amber{background:var(--amber)}.barrow b{font-variant-numeric:tabular-nums;text-align:right}
+nav{display:flex;gap:8px;flex-wrap:wrap;padding:14px 0 24px}button{cursor:pointer;background:#ffffff;border:1px solid var(--line);color:var(--text);padding:11px 15px;border-radius:9px;font:inherit}button[aria-selected="true"]{background:#e9f1ff;border-color:var(--cyan)}button:focus-visible{outline:3px solid var(--cyan)}
+.page[hidden]{display:none}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.metric,.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}.metric span{display:block;color:var(--muted);font-size:13px}.metric strong{display:block;font-size:clamp(23px,3vw,35px);line-height:1.25;margin:7px 0}.metric em{font-style:normal;color:var(--muted);font-size:12px}.layout{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;margin-top:16px}.stack{display:grid;gap:16px}.barrow{display:grid;grid-template-columns:110px 1fr 60px;align-items:center;gap:10px;margin:15px 0}.track{height:22px;background:#e6ecf5;border-radius:5px;overflow:hidden}.fill{height:100%;background:var(--cyan)}.fill.red{background:var(--red)}.fill.green{background:var(--green)}.fill.amber{background:var(--amber)}.barrow b{font-variant-numeric:tabular-nums;text-align:right}
 table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{color:var(--muted);font-weight:600}td.num{text-align:right;font-variant-numeric:tabular-nums} .scroll{overflow:auto}.status{display:flex;height:25px;border-radius:6px;overflow:hidden;margin:14px 0}.status span{min-width:3px}.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
-.note{border-left:3px solid var(--amber);padding:12px 16px;background:#2a2a34;color:#ffe5b8;margin:18px 0;border-radius:0 8px 8px 0}.pill{display:inline-block;border:1px solid var(--line);border-radius:100px;padding:3px 10px;color:var(--muted);font-size:12px}
+.note{border-left:3px solid var(--amber);padding:12px 16px;background:#fff8e8;color:#7b540f;margin:18px 0;border-radius:0 8px 8px 0}.pill{display:inline-block;border:1px solid var(--line);border-radius:100px;padding:3px 10px;color:var(--muted);font-size:12px}
 ol{padding-left:22px}li{margin:8px 0}footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:30px}
 @media(max-width:760px){.metrics{grid-template-columns:repeat(2,1fr)}.layout{grid-template-columns:1fr}header,main,footer{padding:18px}.barrow{grid-template-columns:95px 1fr 45px}.metric,.panel{padding:15px}}
 @media print{body{background:white;color:#152236}header,main,footer{max-width:none}.metric,.panel{background:white;color:#152236;border-color:#bbb;break-inside:avoid}.muted,small,th{color:#536173}nav{display:none}.page[hidden]{display:block!important;page-break-before:always}.note{color:#5d4200;background:#fff5da}}
+
+header{background:white;max-width:none;border-bottom:1px solid var(--line);padding:26px max(24px,calc((100vw - 1172px)/2));box-shadow:0 2px 8px rgba(30,50,80,.03)}
+header h1{font-size:30px;letter-spacing:-.6px}main{padding-top:18px}
+nav{border-bottom:1px solid var(--line);margin-bottom:20px;padding-bottom:12px}
+button{font-size:13px;font-weight:600;border-radius:5px;box-shadow:0 1px 2px rgba(0,0,0,.02)}
+button[aria-selected="true"]{color:#174c9e;border-bottom:3px solid var(--cyan)}
+.metric,.panel{border-radius:7px;box-shadow:0 2px 7px rgba(30,50,80,.045)}
+.metric strong{font-size:28px;letter-spacing:-.5px}
+.metric span{font-size:12px;text-transform:uppercase;letter-spacing:.045em}
+.panel h2{font-size:17px;font-weight:650}
+th{background:#f5f8fc;color:#53667d}td,th{font-size:13px}
+.eyebrow{letter-spacing:.12em}
+.note{border-left:3px solid var(--amber)}
+.pill{background:#f5f8fc;border-radius:5px}
+.report-toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 0 4px}
+.report-toolbar label{font-size:12px;color:var(--muted);font-weight:650}
+.report-toolbar select{border:1px solid var(--line);background:white;color:var(--text);border-radius:5px;padding:8px 12px}
+.report-toolbar .source{margin-left:auto;font-size:12px;color:var(--muted)}
+body{font-family:Arial,Helvetica,sans-serif}
+@media print{header{box-shadow:none}.report-toolbar{display:none}}
 </style>
 </head>
 <body>
@@ -23,6 +43,7 @@ ol{padding-left:22px}li{margin:8px 0}footer{font-size:13px;color:var(--muted);bo
 <span class="pill">Stored P6 forecast comparison — not an independently recalculated CPM model</span>
 </header>
 <main>
+<div class="report-toolbar"><label for="scenario-select">Scenario focus</label><select id="scenario-select" aria-label="Scenario focus"><option value="all">All scenarios</option><option value="a">Recovery A</option><option value="b">Recovery B</option></select><span class="source">DATA SOURCE · Primavera P6 XER snapshot · Updated Nov 2026</span></div>
 <nav aria-label="Dashboard pages">
 <button type="button" aria-selected="true" data-page="overview">01 Executive overview</button>
 <button type="button" aria-selected="false" data-page="performance">02 Schedule performance</button>
@@ -39,8 +60,8 @@ ol{padding-left:22px}li{margin:8px 0}footer{font-size:13px;color:var(--muted);bo
 <div class="layout">
 <div class="panel"><h2>Residual delay against baseline</h2><p class="muted">Calendar days · smaller is better · stored P6 forecast dates</p>
 <div class="barrow"><span>Update 01</span><div class="track"><div class="fill red" style="width:100%"></div></div><b>18 d</b></div>
-<div class="barrow"><span>Recovery A</span><div class="track"><div class="fill green" style="width:16.67%"></div></div><b>3 d</b></div>
-<div class="barrow"><span>Recovery B</span><div class="track"><div class="fill amber" style="width:27.78%"></div></div><b>5 d</b></div>
+<div class="barrow" data-scenario="a"><span>Recovery A</span><div class="track"><div class="fill green" style="width:16.67%"></div></div><b>3 d</b></div>
+<div class="barrow" data-scenario="b"><span>Recovery B</span><div class="track"><div class="fill amber" style="width:27.78%"></div></div><b>5 d</b></div>
 <p><strong>Decision signal:</strong> Recovery A models a finish two days earlier than Recovery B. This does not establish which option is cheaper, safer or feasible.</p>
 </div>
 <div class="panel"><h2>Management assessment</h2><p><strong>Preferred candidate for review:</strong> Recovery A</p><p>Duration compression is confined to four planned durations and does not introduce new dependency links.</p><div class="note"><strong>Verification hold:</strong> 255 activity early-finish dates move earlier in Recovery A. Reconcile P6 scheduling settings, constraints, calendars and the driving path before approval.</div></div>
@@ -60,7 +81,7 @@ ol{padding-left:22px}li{margin:8px 0}footer{font-size:13px;color:var(--muted);bo
 <div class="metric"><span>Not started</span><strong>255</strong><em>96.2% of activities</em></div>
 </div>
 <div class="layout">
-<div class="panel"><h2>Activity status distribution</h2><div class="status" role="img" aria-label="7 completed, 3 in progress, 255 not started"><span style="width:2.64%;background:var(--green)"></span><span style="width:1.13%;background:var(--amber)"></span><span style="width:96.23%;background:#506884"></span></div>
+<div class="panel"><h2>Activity status distribution</h2><div class="status" role="img" aria-label="7 completed, 3 in progress, 255 not started"><span style="width:2.64%;background:var(--green)"></span><span style="width:1.13%;background:var(--amber)"></span><span style="width:96.23%;background:#9baec5"></span></div>
 <div class="legend"><span><i class="dot" style="background:var(--green)"></i>Completed: 7</span><span><i class="dot" style="background:var(--amber)"></i>In progress: 3</span><span><i class="dot" style="background:#506884"></i>Not started: 255</span></div>
 <p class="note">Activity counts are not physical percent complete or earned value. The schedule does not supply validated quantities or cost-weighted progress.</p></div>
 <div class="panel"><h2>Float screening</h2><div class="metric"><span>Update 01 activities with nonpositive exported total float</span><strong>100 / 265</strong><em>37.7% of activities</em></div><p>Baseline: 103 / 265. This is an exception screen only; total float depends on calendars, constraints and schedule calculation settings.</p></div>
@@ -105,6 +126,7 @@ ol{padding-left:22px}li{margin:8px 0}footer{font-size:13px;color:var(--muted);bo
 const buttons=[...document.querySelectorAll("nav button[data-page]")];
 function activate(id){for(const b of buttons){const active=b.dataset.page===id;b.setAttribute("aria-selected",String(active));document.getElementById(b.dataset.page).hidden=!active;}}
 buttons.forEach(b=>b.addEventListener("click",()=>{activate(b.dataset.page);history.replaceState(null,"","#"+b.dataset.page)}));
+const selector=document.getElementById("scenario-select");selector.addEventListener("change",()=>{for(const el of document.querySelectorAll(".barrow[data-scenario]")){el.style.opacity=selector.value==="all"||selector.value===el.dataset.scenario?"1":".25";}});
 const start=location.hash.slice(1);if(buttons.some(b=>b.dataset.page===start))activate(start);
 </script>
 </body></html>
