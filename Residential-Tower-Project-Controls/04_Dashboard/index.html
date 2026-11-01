@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Residential Tower | Project Controls Executive Dashboard</title>
+<style>
+:root{--bg:#0b1220;--panel:#142136;--line:#2b3c53;--text:#f0f5fc;--muted:#a8b9cc;--cyan:#57c6df;--amber:#ffcb7a;--green:#8bdbb2;--red:#ffa3a3}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+header,main,footer{max-width:1220px;margin:auto;padding:24px}header{padding-top:36px}h1{font-size:clamp(26px,4vw,42px);line-height:1.16;margin:8px 0}h2{font-size:21px;margin:0 0 16px}h3{font-size:16px;margin:0 0 10px}p{margin:8px 0 16px}a{color:var(--cyan)}.eyebrow{letter-spacing:.16em;text-transform:uppercase;font-weight:700;font-size:12px;color:var(--cyan)}.muted,small{color:var(--muted)}.sub{max-width:780px;color:var(--muted)}
+nav{display:flex;gap:8px;flex-wrap:wrap;padding:14px 0 24px}button{cursor:pointer;background:#1b2a42;border:1px solid var(--line);color:var(--text);padding:11px 15px;border-radius:9px;font:inherit}button[aria-selected="true"]{background:#1b4861;border-color:var(--cyan)}button:focus-visible{outline:3px solid var(--cyan)}
+.page[hidden]{display:none}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.metric,.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}.metric span{display:block;color:var(--muted);font-size:13px}.metric strong{display:block;font-size:clamp(23px,3vw,35px);line-height:1.25;margin:7px 0}.metric em{font-style:normal;color:var(--muted);font-size:12px}.layout{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;margin-top:16px}.stack{display:grid;gap:16px}.barrow{display:grid;grid-template-columns:110px 1fr 60px;align-items:center;gap:10px;margin:15px 0}.track{height:22px;background:#26374e;border-radius:5px;overflow:hidden}.fill{height:100%;background:var(--cyan)}.fill.red{background:var(--red)}.fill.green{background:var(--green)}.fill.amber{background:var(--amber)}.barrow b{font-variant-numeric:tabular-nums;text-align:right}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{color:var(--muted);font-weight:600}td.num{text-align:right;font-variant-numeric:tabular-nums} .scroll{overflow:auto}.status{display:flex;height:25px;border-radius:6px;overflow:hidden;margin:14px 0}.status span{min-width:3px}.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+.note{border-left:3px solid var(--amber);padding:12px 16px;background:#2a2a34;color:#ffe5b8;margin:18px 0;border-radius:0 8px 8px 0}.pill{display:inline-block;border:1px solid var(--line);border-radius:100px;padding:3px 10px;color:var(--muted);font-size:12px}
+ol{padding-left:22px}li{margin:8px 0}footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:30px}
+@media(max-width:760px){.metrics{grid-template-columns:repeat(2,1fr)}.layout{grid-template-columns:1fr}header,main,footer{padding:18px}.barrow{grid-template-columns:95px 1fr 45px}.metric,.panel{padding:15px}}
+@media print{body{background:white;color:#152236}header,main,footer{max-width:none}.metric,.panel{background:white;color:#152236;border-color:#bbb;break-inside:avoid}.muted,small,th{color:#536173}nav{display:none}.page[hidden]{display:block!important;page-break-before:always}.note{color:#5d4200;background:#fff5da}}
+</style>
+</head>
+<body>
+<header><div class="eyebrow">Project controls · simulated construction case study</div>
+<h1>Residential Tower<br>Executive Schedule Intelligence</h1>
+<p class="sub">15-story residential tower · 2 basement levels · Primavera P6 XER scenario audit · Baseline, Update 01 and two recovery alternatives</p>
+<span class="pill">Stored P6 forecast comparison — not an independently recalculated CPM model</span>
+</header>
+<main>
+<nav aria-label="Dashboard pages">
+<button type="button" aria-selected="true" data-page="overview">01 Executive overview</button>
+<button type="button" aria-selected="false" data-page="performance">02 Schedule performance</button>
+<button type="button" aria-selected="false" data-page="recovery">03 Recovery analysis</button>
+<button type="button" aria-selected="false" data-page="decisions">04 Risks & decisions</button>
+</nav>
+<section class="page" id="overview">
+<div class="metrics">
+<div class="metric"><span>Baseline finish</span><strong>13 May 2028</strong><em>Original P6 scheduled finish</em></div>
+<div class="metric"><span>Update 01 finish</span><strong>31 May 2028</strong><em>18 calendar days later</em></div>
+<div class="metric"><span>Recovery A finish</span><strong>16 May 2028</strong><em>15 days recovered</em></div>
+<div class="metric"><span>Recovery B finish</span><strong>18 May 2028</strong><em>13 days recovered</em></div>
+</div>
+<div class="layout">
+<div class="panel"><h2>Residual delay against baseline</h2><p class="muted">Calendar days · smaller is better · stored P6 forecast dates</p>
+<div class="barrow"><span>Update 01</span><div class="track"><div class="fill red" style="width:100%"></div></div><b>18 d</b></div>
+<div class="barrow"><span>Recovery A</span><div class="track"><div class="fill green" style="width:16.67%"></div></div><b>3 d</b></div>
+<div class="barrow"><span>Recovery B</span><div class="track"><div class="fill amber" style="width:27.78%"></div></div><b>5 d</b></div>
+<p><strong>Decision signal:</strong> Recovery A models a finish two days earlier than Recovery B. This does not establish which option is cheaper, safer or feasible.</p>
+</div>
+<div class="panel"><h2>Management assessment</h2><p><strong>Preferred candidate for review:</strong> Recovery A</p><p>Duration compression is confined to four planned durations and does not introduce new dependency links.</p><div class="note"><strong>Verification hold:</strong> 255 activity early-finish dates move earlier in Recovery A. Reconcile P6 scheduling settings, constraints, calendars and the driving path before approval.</div></div>
+</div>
+<div class="panel" style="margin-top:16px"><h2>Scenario comparison</h2><div class="scroll"><table><thead><tr><th>Scenario</th><th>Finish</th><th>Delay vs baseline</th><th>Recovered vs update</th><th>Activities</th><th>Relationships</th></tr></thead><tbody>
+<tr><td>Baseline</td><td>13 May 2028</td><td>0 d</td><td>—</td><td>265</td><td>362</td></tr>
+<tr><td>Update 01</td><td>31 May 2028</td><td>+18 d</td><td>—</td><td>265</td><td>362</td></tr>
+<tr><td>Recovery A</td><td>16 May 2028</td><td>+3 d</td><td>15 d</td><td>265</td><td>362</td></tr>
+<tr><td>Recovery B</td><td>18 May 2028</td><td>+5 d</td><td>13 d</td><td>265</td><td>363</td></tr>
+</tbody></table></div></div>
+</section>
+<section class="page" id="performance" hidden>
+<div class="metrics">
+<div class="metric"><span>Update 01 activities</span><strong>265</strong><em>Activity count, not weighted progress</em></div>
+<div class="metric"><span>Completed</span><strong>7</strong><em>2.6% of activities</em></div>
+<div class="metric"><span>In progress</span><strong>3</strong><em>1.1% of activities</em></div>
+<div class="metric"><span>Not started</span><strong>255</strong><em>96.2% of activities</em></div>
+</div>
+<div class="layout">
+<div class="panel"><h2>Activity status distribution</h2><div class="status" role="img" aria-label="7 completed, 3 in progress, 255 not started"><span style="width:2.64%;background:var(--green)"></span><span style="width:1.13%;background:var(--amber)"></span><span style="width:96.23%;background:#506884"></span></div>
+<div class="legend"><span><i class="dot" style="background:var(--green)"></i>Completed: 7</span><span><i class="dot" style="background:var(--amber)"></i>In progress: 3</span><span><i class="dot" style="background:#506884"></i>Not started: 255</span></div>
+<p class="note">Activity counts are not physical percent complete or earned value. The schedule does not supply validated quantities or cost-weighted progress.</p></div>
+<div class="panel"><h2>Float screening</h2><div class="metric"><span>Update 01 activities with nonpositive exported total float</span><strong>100 / 265</strong><em>37.7% of activities</em></div><p>Baseline: 103 / 265. This is an exception screen only; total float depends on calendars, constraints and schedule calculation settings.</p></div>
+</div>
+</section>
+<section class="page" id="recovery" hidden>
+<div class="metrics"><div class="metric"><span>Recovery A modeled improvement</span><strong>15 days</strong><em>83.3% of original delay</em></div><div class="metric"><span>Recovery A compressed tasks</span><strong>4</strong><em>80 total activity-hours reduced</em></div><div class="metric"><span>Recovery B modeled improvement</span><strong>13 days</strong><em>72.2% of original delay</em></div><div class="metric"><span>Recovery B logic delta</span><strong>4 + / 3 −</strong><em>Added / removed links</em></div></div>
+<div class="layout">
+<div class="panel"><h2>Recovery A · duration compression</h2><div class="scroll"><table><thead><tr><th>Activity</th><th>Work package</th><th>Duration reduction</th></tr></thead><tbody>
+<tr><td>EXC-030</td><td>Basement 1 excavation</td><td>16 h</td></tr>
+<tr><td>EXC-040</td><td>Basement 2 excavation & dewatering</td><td>16 h</td></tr>
+<tr><td>TST-020</td><td>Integrated MEP functional testing</td><td>24 h</td></tr>
+<tr><td>TST-050</td><td>Snag closeout, manuals & training</td><td>24 h</td></tr>
+</tbody></table></div><p class="muted">80 hours is the sum of four individual reductions, not 80 hours of project finish improvement.</p></div>
+<div class="panel"><h2>Recovery B · logic optimization</h2><p>Three FS links are replaced with SS links and positive lags; an additional FS link preserves the inspection-to-handover gate.</p>
+<div class="scroll"><table><thead><tr><th>Interface</th><th>New relationship</th></tr></thead><tbody>
+<tr><td>TST-010 → TST-020</td><td>SS +80 h</td></tr><tr><td>TST-020 → TST-030</td><td>SS +112 h</td></tr><tr><td>TST-040 → TST-050</td><td>SS +80 h</td></tr><tr><td>TST-040 → M-HANDOVER</td><td>FS +0 h</td></tr>
+</tbody></table></div><p class="muted">Overlap requires workface, testing, authority and safety validation.</p></div>
+</div>
+<div class="note"><strong>Schedule integrity exception:</strong> Recovery A changes 255 exported activity early-finish dates despite only four shorter planned durations. Do not assume all date movement is caused by compression. Independent rescheduling is required.</div>
+</section>
+<section class="page" id="decisions" hidden>
+<div class="layout">
+<div class="panel"><h2>Decision matrix</h2><div class="scroll"><table><thead><tr><th>Dimension</th><th>Recovery A</th><th>Recovery B</th></tr></thead><tbody>
+<tr><td>Modeled recovery</td><td>15 days</td><td>13 days</td></tr><tr><td>Primary change</td><td>Four shorter durations</td><td>Revised testing/closeout links</td></tr>
+<tr><td>Main feasibility concern</td><td>Acceleration productivity and resource capacity</td><td>Concurrent workface and handover readiness</td></tr>
+<tr><td>Schedule-integrity concern</td><td>Widespread early-finish shifts</td><td>Logic changes require review</td></tr>
+<tr><td>Commercial impact</td><td>Unknown</td><td>Unknown</td></tr></tbody></table></div></div>
+<div class="panel"><h2>Approval gates</h2><ol><li><strong>Recalculate:</strong> align data dates, calendars, constraints and P6 settings.</li><li><strong>Verify critical logic:</strong> trace the driving path to handover and explain Recovery A's date shifts.</li><li><strong>Prove constructability:</strong> check crews, productivity, site access, inspections and safety.</li><li><strong>Quantify economics:</strong> assess acceleration cost and time–cost trade-offs.</li><li><strong>Authorize and monitor:</strong> approve only after evidence is reviewed; track weekly milestones.</li></ol></div>
+</div>
+<div class="panel" style="margin-top:16px"><h2>Risk register · qualitative</h2><div class="scroll"><table><thead><tr><th>Risk</th><th>Option</th><th>Proposed response</th></tr></thead><tbody>
+<tr><td>Unreconciled forecast date movement</td><td>A</td><td>Controlled P6 recalculation and exception log</td></tr>
+<tr><td>Unproven crew productivity</td><td>A</td><td>Resource histogram and method statement</td></tr>
+<tr><td>Overlapping test interfaces</td><td>B</td><td>Commissioning sequence and hold-point review</td></tr>
+<tr><td>Quality and authority sign-off</td><td>A / B</td><td>Preserve inspection and approval gates</td></tr>
+<tr><td>Unknown acceleration premium</td><td>A / B</td><td>Commercial evaluation before approval</td></tr>
+</tbody></table></div></div>
+</section>
+</main>
+<footer><strong>Evidence:</strong> four simulated Primavera P6 XER scenarios; activity and relationship counts, status, duration and logic comparisons. This dashboard reports exported P6 values and qualitative engineering interpretation. It is not an independently calculated CPM, earned-value, resource-loaded or cost-validated forecast. <a href="../05_Reports/Detailed_Engineering_Analysis.md">Read the detailed engineering report</a>.</footer>
+<script>
+const buttons=[...document.querySelectorAll("nav button[data-page]")];
+function activate(id){for(const b of buttons){const active=b.dataset.page===id;b.setAttribute("aria-selected",String(active));document.getElementById(b.dataset.page).hidden=!active;}}
+buttons.forEach(b=>b.addEventListener("click",()=>{activate(b.dataset.page);history.replaceState(null,"","#"+b.dataset.page)}));
+const start=location.hash.slice(1);if(buttons.some(b=>b.dataset.page===start))activate(start);
+</script>
+</body></html>
