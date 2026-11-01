@@ -20,6 +20,16 @@
 
 **Finding:** Recovery A closes 15 of 18 delayed calendar days (83.3% of the delay), while Recovery B closes 13 (72.2%). These are comparisons of **stored P6 scheduled-finish fields**, not independent CPM recalculations.
 
+## Deep-dive engineering interpretation
+
+The headline schedule result is only the beginning of the analysis. The [Detailed Engineering Analysis](./05_Reports/Detailed_Engineering_Analysis.md) explains the original 18-day delay, the four compressed activities in Recovery A, the FS-to-SS handoff changes in Recovery B, float and progress interpretation, and the governance checks needed before authorizing a recovery programme.
+
+**Important diagnostic:** Although Recovery A changes only four planned durations, **255 activity early-finish dates move earlier** relative to Update 01 (217 by eight calendar days and 31 by nine days). This widespread movement is a **P6 schedule-integrity validation item**. It should not be credited entirely to duration compression without confirming data dates, calendars, constraints and rescheduling behavior. Recovery B has four shifted activity early finishes and 261 unchanged, consistent with a more localized downstream change.
+
+**Read the analysis before relying on the modeled recovery:** [Full schedule diagnostics, risk evaluation and management action plan](./05_Reports/Detailed_Engineering_Analysis.md).
+
+---
+
 ## Recovery option assessment
 
 **Recovery A — selective duration compression.** Four activities have reduced planned durations relative to Update 01: TST-020 (−24 hours), TST-050 (−24 hours), EXC-030 (−16 hours) and EXC-040 (−16 hours). The normalized dependency set is unchanged. The management trade-off is stronger finish-date recovery versus the need to substantiate acceleration productivity, resources, cost and workface constraints.
