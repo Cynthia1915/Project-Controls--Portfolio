@@ -6,7 +6,11 @@
 **P6 data date:** 31 January 2026, 17:00  
 **Milestone:** RFS-040 — Ready for Service
 
-## What I modeled and why\n\nI used the exported Primavera activity network to test how duration uncertainty could affect the modeled Ready for Service milestone. I kept the first implementation intentionally reproducible, using the existing precedence engine and fixed assumptions. My focus was on translating the distribution into a management-facing risk signal without overstating confidence.\n\n## Model and run
+## What I modeled and why
+
+I used the exported Primavera activity network to test how duration uncertainty could affect the modeled Ready for Service milestone. I kept the first implementation intentionally reproducible, using the existing precedence engine and fixed assumptions. My focus was on translating the distribution into a management-facing risk signal without overstating confidence.
+
+## Model and run
 
 - Parsed 808 TASK records and 1,406 TASKPRED relationships.
 - Reproduced the existing repository's network topological forward-pass logic with FS/SS/FF/SF and lags.
@@ -29,7 +33,11 @@
 
 **Interpretation:** Under the illustrative, independently sampled duration factors, the P80 modeled relative-hour finish exceeds the deterministic reference by 193.60 hours. This is **not** a contractual schedule contingency in P6 working hours and cannot be translated to a date without a validated calendar-aware engine. The 99.96% figure is not the probability of missing the contractual RFS date.
 
-## My interpretation and next engineering steps\n\nThe P80 result is 193.60 relative hours above the deterministic reference. This suggests meaningful exposure within my **illustrative** model, but it does not establish that the contractual date will be missed. Before using the result for a mitigation or contingency decision, I would verify calendar and data-date behavior against Primavera, calibrate the uncertainty assumptions, and evaluate shared risks and driving-path sensitivity.\n\n## Engineering limitations and required next phase
+## My interpretation and next engineering steps
+
+The P80 result is 193.60 relative hours above the deterministic reference. This suggests meaningful exposure within my **illustrative** model, but it does not establish that the contractual date will be missed. Before using the result for a mitigation or contingency decision, I would verify calendar and data-date behavior against Primavera, calibrate the uncertainty assumptions, and evaluate shared risks and driving-path sensitivity.
+
+## Engineering limitations and required next phase
 
 1. XER source was provided in chat, but is not stored in this public repository. The repository's existing `network_monte_carlo.py` is the reference implementation; its outputs can be reproduced by running it against the same XER with `--runs 10000 --seed 42 --target RFS-040`.
 2. The model uses continuous elapsed hours and does not reconstruct P6 working calendars, exceptions, data-date anchoring, constraints, scheduling options or resource leveling.
