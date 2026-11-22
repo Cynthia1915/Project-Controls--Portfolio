@@ -14,15 +14,18 @@ An independent portfolio of engineering-led case studies demonstrating the integ
 
 ---
 
-## Portfolio at a glance
+## Two flagship capital-project case studies
 
-| **CONTROL** | **PREDICT** | **ASSURE** |
-| :--- | :--- | :--- |
-| **Integrated Project Controls** | **Probabilistic Schedule Risk** | **Schedule Quality & Assurance** |
-| Baseline → Progress → EVM → Forecast | Uncertainty → Confidence → Mitigation | Logic → Exceptions → Corrective Action |
-| [Hyperscale Data Center](./Hyperscale-Data-Center/) | [Monte Carlo Schedule Risk](./Monte-Carlo-Schedule-Risk-Simulator/) | **In development** |
+My portfolio is organized around two complementary management problems: **predicting delivery exposure** and **evaluating corrective action**. Both are independent, synthetic engineering case studies, not client engagements.
 
-**Core proposition:** combine engineering planning knowledge with structured analysis and automation to help project teams understand **where they stand, what could change, and what deserves management attention**.
+| Flagship | Management question | Evidence | Decision-support deliverable |
+| --- | --- | --- | --- |
+| **[Hyperscale Data Center — Integrated Controls & Schedule Risk](./Hyperscale-Data-Center/)** | How can leadership interpret changing performance and emerging schedule uncertainty? | 808 activities, 1,406 relationships; USD 120m synthetic baseline; progress updates; 10,000-run illustrative network Monte Carlo | Executive controls dashboard, forecast interpretation and [experimental schedule-risk report](./Hyperscale-Data-Center/docs/monte-carlo-experimental-results.md) |
+| **[Residential Tower — Schedule Recovery & Options Appraisal](./Residential-Tower-Project-Controls/)** | Which recovery strategy merits further feasibility assessment? | Four P6 XER scenarios; 265 activities each; +18-day update delay; Recovery A/B comparisons | [Executive decision brief](./Residential-Tower-Project-Controls/05_Reports/Executive_Decision_Brief.md), recovery dashboard and gated recommendation |
+
+**My approach:** establish the schedule evidence, test assumptions, quantify the implications, and communicate a management decision together with its validation conditions. Python and dashboards support the engineering analysis; they are not the primary outcome.
+
+**What is verified versus provisional:** Residential Tower scenario differences are taken from stored P6 fields, not independent CPM recalculation. The Data Center Monte Carlo is a continuous-hour experiment with illustrative duration assumptions; its percentiles are **not** validated contractual completion dates.
 
 ---
 
@@ -54,31 +57,13 @@ This simulated hyperscale data-center case study develops an integrated Project 
 
 [**Executive overview**](./Hyperscale-Data-Center/dashboard/01-executive-overview.png) · [**Cost & forecasting**](./Hyperscale-Data-Center/dashboard/02-cost-forecast.png) · [**Schedule & risk**](./Hyperscale-Data-Center/dashboard/03-schedule-risk.png)
 
-**Management perspective:** translate progress and forecast indicators into specific issues for review, particularly design-to-procurement interfaces, long-lead equipment and commissioning readiness.
+**My management interpretation:** I use schedule updates and modeled uncertainty to identify the interfaces leadership should investigate first—design release, long-lead equipment, energization and commissioning. The 10,000-run risk experiment adds a reproducible relative-hour P80 screening result, not a contractual date forecast.
 
-**[Explore the complete Data Center case study →](./Hyperscale-Data-Center/)**
-
----
-
-## Featured case study 02 — Monte Carlo Schedule Risk
-### Probabilistic Forecasting | Completion Confidence · Risk Drivers · Contingency
-
-**The management challenge:** A deterministic finish date does not communicate the uncertainty around that forecast.
-
-This case study examines how activity-duration uncertainty can be translated into indicative completion distributions and management-oriented schedule-risk measures.
-
-**Analytical objectives**
-- Assess **P50 / P80 / P90** completion outcomes and confidence against a defined target.
-- Identify influential schedule-risk drivers and evaluate alternative mitigation assumptions.
-- Communicate schedule contingency and key limitations in a concise executive summary.
-
-**Publication status:** [The currently published simulator](./Monte-Carlo-Schedule-Risk-Simulator/) is an **illustrative, simplified V1**. A more rigorous network-aware version is under validation; its results are **not yet claimed as finalized or independently calibrated**. The V1 must not be interpreted as a full commercial CPM-based quantitative schedule risk assessment.
-
-**[View the current schedule-risk project →](./Monte-Carlo-Schedule-Risk-Simulator/)**
+**[Explore the complete Data Center case study →](./Hyperscale-Data-Center/)** · [**Monte Carlo executive dashboard**](./Hyperscale-Data-Center/dashboard/monte-carlo-executive.html) · [**Experimental risk results**](./Hyperscale-Data-Center/docs/monte-carlo-experimental-results.md)
 
 ---
 
-## Featured case study — Residential Tower Schedule Recovery
+## Featured case study 02 — Residential Tower Schedule Recovery
 ### Primavera P6 · Progress Updates · Recovery Analysis · Executive Decision Support
 
 **Management challenge:** An updated simulated 15-story residential tower schedule forecasts completion **18 calendar days late**. Two alternative recovery strategies are evaluated against the same baseline.
@@ -90,7 +75,7 @@ This case study examines how activity-duration uncertainty can be translated int
 | Recovery A — duration compression | 16 May 2028 | +3 | 15 |
 | Recovery B — logic resequencing | 18 May 2028 | +5 | 13 |
 
-**Decision insight:** Recovery A produces the earlier modeled finish without changing the dependency set, but its acceleration productivity, resources and cost remain unvalidated. Recovery B introduces overlap-related interface risks. The recommended next step is a controlled feasibility and cost review—not immediate implementation.
+**My decision recommendation:** Advance Recovery A for controlled feasibility review, **not implementation approval**. Its earlier stored finish requires schedule-integrity verification: 255 activity early-finish dates move earlier, far beyond the four compressed activities. Acceleration productivity, resources and cost remain unvalidated. Recovery B introduces overlap-related interface risks. The recommended next step is a controlled feasibility and cost review—not immediate implementation.
 
 **Evidence:** Four original Primavera P6 XER files; 265 activities per scenario; Python extraction and reproducible comparison; executive risk and decision brief. Simulated schedules, not live project results.
 
@@ -100,7 +85,7 @@ This case study examines how activity-duration uncertainty can be translated int
 
 ---
 
-## Featured case study 03 — Schedule Health & Assurance
+## Supporting capability — Schedule Health & Assurance
 ### Primavera P6 Schedule Quality | Planning Integrity · Exceptions · Corrective Actions
 
 **The management challenge:** Forecasts are only as reliable as the schedule logic and data supporting them.
@@ -117,7 +102,7 @@ The following are **supporting proof-of-concept exercises**, presented separatel
 
 | Project | Project-controls relevance |
 | --- | --- |
-| [Primavera P6 Baseline Risk Intelligence Engine V1](./Primavera_P6_Baseline_Risk_Intelligence_Engine_V1/) | Structured baseline risk screening and prioritization |
+| [Monte Carlo Schedule Risk Simulator V1](./Monte-Carlo-Schedule-Risk-Simulator/) | Early illustrative duration-risk exercise; superseded for flagship presentation by the Data Center network experiment |\n| [Primavera P6 Baseline Risk Intelligence Engine V1](./Primavera_P6_Baseline_Risk_Intelligence_Engine_V1/) | Structured baseline risk screening and prioritization |
 | [Performance-Driven Risk & Forecasting Engine V03](./Performance-Driven-Risk-Forecasting-Engine-V03/) | Performance metrics and exploratory forecasting |
 | [Project Controls Early Warning System V01](./Project_Controls_Early_Warning_System_V01/) | Rule-based issue detection, alerts and escalation |
 | [FIDIC Claims & EOT Intelligence Assistant V01](./FIDIC-Claims-EOT-Intelligence-Assistant-V01/) | Early-stage delay-event and documentation screening; **not a contractual entitlement determination or forensic delay analysis** |
