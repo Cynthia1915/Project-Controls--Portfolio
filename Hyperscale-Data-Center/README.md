@@ -10,7 +10,11 @@ I developed this independent **synthetic project-controls case study** to connec
 
 ---
 
-[Validation & risk model](./docs/validation-and-risk-model.md) — reproducible QA, EVM reconciliation interface, and network-aware Monte Carlo prototype (not P6 calendar-equivalent).\n\n[10,000-run experimental Monte Carlo results](./docs/monte-carlo-experimental-results.md) · [Monte Carlo relative-hour risk reporting](./docs/monte-carlo-risk-reporting.md) — reproducible P10/P50/P80/P90 relative-hour reporting, histogram and limitations; **no contractual completion-date probabilities are claimed**.\n\n## Executive project profile
+[Validation & risk model](./docs/validation-and-risk-model.md) — reproducible QA, EVM reconciliation interface, and network-aware Monte Carlo prototype (not P6 calendar-equivalent).
+
+[10,000-run experimental Monte Carlo results](./docs/monte-carlo-experimental-results.md) · [Monte Carlo relative-hour risk reporting](./docs/monte-carlo-risk-reporting.md) — reproducible P10/P50/P80/P90 relative-hour reporting, histogram and limitations; **no contractual completion-date probabilities are claimed**.
+
+## Executive project profile
 
 | Parameter | Case-study basis |
 | --- | --- |
@@ -39,7 +43,23 @@ My approach connects the P6 schedule baseline and reporting updates with perform
 
 ---
 
-## Monte Carlo schedule-risk analysis\n\nI extended my schedule analysis with a reproducible 10,000-run Monte Carlo experiment using the Data Center XER activity network. The objective was to quantify **relative-hour milestone exposure** under transparent, illustrative duration uncertainty and to turn the output into an executive decision-support view.\n\n**[Open the executive Monte Carlo dashboard](./dashboard/monte-carlo-executive.html)** · [Read my simulation results and limitations](./docs/monte-carlo-experimental-results.md) · [Reproduce the analysis](./docs/monte-carlo-risk-reporting.md)\n\n| Modeled indicator | Relative hours |\n| --- | ---: |\n| Deterministic reference | 3,296.00 |\n| P50 | 3,440.92 |\n| P80 | 3,489.60 |\n| P90 | 3,527.74 |\n| P80 difference from reference | +193.60 |\n\n**My interpretation:** The experimental P80 exceeds the deterministic relative-hour reference by 193.60 hours. I treat this as a schedule-risk screening result, **not** a validated calendar contingency or contractual RFS completion probability. My next validation step is to reconcile the deterministic network with P6 calendars, progress, and scheduling options, then calibrate uncertainty and shared risks.\n\n## 01 — Planning & baseline control
+## Monte Carlo schedule-risk analysis
+
+I extended my schedule analysis with a reproducible 10,000-run Monte Carlo experiment using the Data Center XER activity network. The objective was to quantify **relative-hour milestone exposure** under transparent, illustrative duration uncertainty and to turn the output into an executive decision-support view.
+
+**[Open the executive Monte Carlo dashboard](./dashboard/monte-carlo-executive.html)** · [Read my simulation results and limitations](./docs/monte-carlo-experimental-results.md) · [Reproduce the analysis](./docs/monte-carlo-risk-reporting.md)
+
+| Modeled indicator | Relative hours |
+| --- | ---: |
+| Deterministic reference | 3,296.00 |
+| P50 | 3,440.92 |
+| P80 | 3,489.60 |
+| P90 | 3,527.74 |
+| P80 difference from reference | +193.60 |
+
+**My interpretation:** The experimental P80 exceeds the deterministic relative-hour reference by 193.60 hours. I treat this as a schedule-risk screening result, **not** a validated calendar contingency or contractual RFS completion probability. My next validation step is to reconcile the deterministic network with P6 calendars, progress, and scheduling options, then calibrate uncertainty and shared risks.
+
+## 01 — Planning & baseline control
 
 **[Read the Baseline, Schedule & Progress Updates walkthrough →](./docs/baseline-and-schedule-updates.md)**
 
