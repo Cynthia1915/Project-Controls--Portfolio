@@ -4,7 +4,7 @@
 
 > **Management question:** How is project delivery performance changing, what does the latest forecast indicate, and where should management intervene?
 
-This independent **synthetic project-controls case study** connects baseline planning, progress updates, cost and schedule performance analysis, forecasting and management reporting for a hyperscale data-center development.
+I developed this independent **synthetic project-controls case study** to connect baseline planning, progress updates, cost and schedule performance analysis, forecasting, and management reporting for a hyperscale data-center development. I use the model to explore how schedule evidence can inform management decisions, while documenting the assumptions and validation boundaries.
 
 [← Portfolio overview](../README.md) · [Baseline & progress updates](./docs/baseline-and-schedule-updates.md) · [Schedule evidence](./primavera/) · [Dashboard gallery](./dashboard/) · [Methodology](./docs/methodology.md) · [Reporting data](./data/)
 
@@ -27,7 +27,7 @@ This independent **synthetic project-controls case study** connects baseline pla
 
 **Project objective:** demonstrate a repeatable reporting workflow that helps a project-controls team move from a static schedule snapshot to **performance trends, forecast interpretation and prioritized actions**.
 
-## 01 — Planning & baseline control
+## Monte Carlo schedule-risk analysis\n\nI extended my schedule analysis with a reproducible 10,000-run Monte Carlo experiment using the Data Center XER activity network. The objective was to quantify **relative-hour milestone exposure** under transparent, illustrative duration uncertainty and to turn the output into an executive decision-support view.\n\n**[Open the executive Monte Carlo dashboard](./dashboard/monte-carlo-executive.html)** · [Read my simulation results and limitations](./docs/monte-carlo-experimental-results.md) · [Reproduce the analysis](./docs/monte-carlo-risk-reporting.md)\n\n| Modeled indicator | Relative hours |\n| --- | ---: |\n| Deterministic reference | 3,296.00 |\n| P50 | 3,440.92 |\n| P80 | 3,489.60 |\n| P90 | 3,527.74 |\n| P80 difference from reference | +193.60 |\n\n**My interpretation:** The experimental P80 exceeds the deterministic relative-hour reference by 193.60 hours. I treat this as a schedule-risk screening result, **not** a validated calendar contingency or contractual RFS completion probability. My next validation step is to reconcile the deterministic network with P6 calendars, progress, and scheduling options, then calibrate uncertainty and shared risks.\n\n## 01 — Planning & baseline control
 
 **[Read the Baseline, Schedule & Progress Updates walkthrough →](./docs/baseline-and-schedule-updates.md)**
 
@@ -96,7 +96,7 @@ The dashboard is designed to answer: **Where are we? What changed? What is forec
 | Folder | Contents |
 | --- | --- |
 | [`primavera/`](./primavera/) | Baseline and update schedule PDFs |
-| [`dashboard/`](./dashboard/) | Three executive dashboard screenshots |
+| [`dashboard/`](./dashboard/) | Three executive dashboard screenshots and my interactive Monte Carlo dashboard |
 | [`data/`](./data/) | Case-study reporting workbook and data notes |
 | [`docs/`](./docs/) | Methodology and modeling limitations |
 | [`notebooks/`](./notebooks/) | Read-only XER audit, network Monte Carlo prototype, relative-hour risk reporting, EVM reconciliation and tests |
