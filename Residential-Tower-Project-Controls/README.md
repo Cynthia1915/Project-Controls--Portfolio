@@ -6,6 +6,18 @@
 
 > **Management question:** An updated schedule forecasts completion 18 calendar days later than baseline. Which recovery intervention offers the stronger finish-date improvement, and what must be validated before management can authorize it?
 
+## My consulting-style case study
+
+I developed this independent schedule-recovery analysis to evaluate a practical management decision: **how should a project team respond when the updated completion forecast is 18 calendar days later than baseline?** Rather than selecting the earliest finish automatically, I compared the P6 schedule evidence, the intervention required, and the conditions that would need to be satisfied before approval.
+
+**My recommendation:** prioritize **Recovery A for feasibility and cost validation**, not immediate execution. It has the earlier stored forecast (16 May 2028 versus 18 May 2028 for Recovery B), but the unusually broad early-finish shifts require independent schedule reconciliation before its recovery benefit can be relied on.
+
+**What I delivered:** four-scenario XER comparison, intervention audit, executive dashboard, decision brief, and reproducible extraction scripts. **What I did not claim:** verified site productivity, acceleration costs, an independently recalculated CPM, or a live client outcome.
+
+[Executive decision brief](./05_Reports/Executive_Decision_Brief.md) · [Detailed engineering diagnostics](./05_Reports/Detailed_Engineering_Analysis.md) · [Interactive dashboard](./04_Dashboard/)
+
+---
+
 ## Executive dashboard
 
 [![Residential Tower — executive schedule dashboard](./04_Dashboard/executive-preview.svg)](./04_Dashboard/)

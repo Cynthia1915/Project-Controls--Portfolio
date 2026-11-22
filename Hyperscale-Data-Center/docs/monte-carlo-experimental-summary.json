@@ -1,0 +1,23 @@
+{
+  "project": "DC-HYP-FINAL-6",
+  "data_date": "2026-01-31 17:00",
+  "activities": 808,
+  "relationships": 1406,
+  "target": "RFS-040",
+  "runs": 10000,
+  "seed": 42,
+  "triangular_multipliers": {
+    "min": 0.8,
+    "mode": 1,
+    "max": 1.3
+  },
+  "nominal_relative_hours": 3296,
+  "p10_relative_hours": 3381.88,
+  "p50_relative_hours": 3440.92,
+  "p80_relative_hours": 3489.6,
+  "p90_relative_hours": 3527.74,
+  "p80_contingency_relative_hours": 193.6,
+  "probability_exceeding_nominal": 0.9996,
+  "validation_status": "UNVALIDATED_P6_CALENDAR_EQUIVALENCE",
+  "limitations": "Continuous-hour CPM with independent uncalibrated triangular multipliers; no P6 calendars, constraints, actual date anchoring or contractual completion-date confidence."
+}
