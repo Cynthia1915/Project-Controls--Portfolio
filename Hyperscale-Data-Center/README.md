@@ -10,7 +10,7 @@ This independent **synthetic project-controls case study** connects baseline pla
 
 ---
 
-[Validation & risk model](./docs/validation-and-risk-model.md) — reproducible QA, EVM reconciliation interface, and network-aware Monte Carlo prototype (not P6 calendar-equivalent).\n\n[Monte Carlo relative-hour risk reporting](./docs/monte-carlo-risk-reporting.md) — reproducible P10/P50/P80/P90 relative-hour reporting, histogram and limitations; **no contractual completion-date probabilities are claimed**.\n\n## Executive project profile
+[Validation & risk model](./docs/validation-and-risk-model.md) — reproducible QA, EVM reconciliation interface, and network-aware Monte Carlo prototype (not P6 calendar-equivalent).\n\n[10,000-run experimental Monte Carlo results](./docs/monte-carlo-experimental-results.md) · [Monte Carlo relative-hour risk reporting](./docs/monte-carlo-risk-reporting.md) — reproducible P10/P50/P80/P90 relative-hour reporting, histogram and limitations; **no contractual completion-date probabilities are claimed**.\n\n## Executive project profile
 
 | Parameter | Case-study basis |
 | --- | --- |
