@@ -10,7 +10,7 @@ This independent **synthetic project-controls case study** connects baseline pla
 
 ---
 
-[Validation & risk model](./docs/validation-and-risk-model.md) — reproducible QA, EVM reconciliation interface, and network-aware Monte Carlo prototype (not P6 calendar-equivalent).\n\n## Executive project profile
+[Validation & risk model](./docs/validation-and-risk-model.md) — reproducible QA, EVM reconciliation interface, and network-aware Monte Carlo prototype (not P6 calendar-equivalent).\n\n[Monte Carlo relative-hour risk reporting](./docs/monte-carlo-risk-reporting.md) — reproducible P10/P50/P80/P90 relative-hour reporting, histogram and limitations; **no contractual completion-date probabilities are claimed**.\n\n## Executive project profile
 
 | Parameter | Case-study basis |
 | --- | --- |
@@ -99,13 +99,13 @@ The dashboard is designed to answer: **Where are we? What changed? What is forec
 | [`dashboard/`](./dashboard/) | Three executive dashboard screenshots |
 | [`data/`](./data/) | Case-study reporting workbook and data notes |
 | [`docs/`](./docs/) | Methodology and modeling limitations |
-| [`notebooks/`](./notebooks/) | Data-processing workflow notes; **no executable notebook is currently committed here** |
+| [`notebooks/`](./notebooks/) | Read-only XER audit, network Monte Carlo prototype, relative-hour risk reporting, EVM reconciliation and tests |
 
 ### Status and limitations
 
 - **Available:** P6 schedule summaries, reporting workbook, executive dashboard screenshots.
 - **Documented analytical workflow:** P6 → structured reporting data → EVM/forecast analysis → dashboard.
-- **Not currently available in this repository:** a complete executable, reproducible Python notebook for the Data Center workflow.
+- **Available reproducible scripts:** XER audit, continuous-hour network Monte Carlo, relative-hour risk report, and EVM reconciliation. The original Data Center XER is **not** committed, so project-specific simulation outputs have not been run or validated here.
 - **Quality control before external presentation:** verify dashboard figures, data-date filters, forecast labels and management text against the same reporting period.
 
 **Disclosure:** This is a synthetic portfolio case study. Dates, budgets, progress and analysis illustrate project-controls methods; they do not represent a real client's performance or an independently verified forecast.
