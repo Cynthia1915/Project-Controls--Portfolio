@@ -102,7 +102,8 @@ The following are **supporting proof-of-concept exercises**, presented separatel
 
 | Project | Project-controls relevance |
 | --- | --- |
-| [Monte Carlo Schedule Risk Simulator V1](./Monte-Carlo-Schedule-Risk-Simulator/) | Early illustrative duration-risk exercise; superseded for flagship presentation by the Data Center network experiment |\n| [Primavera P6 Baseline Risk Intelligence Engine V1](./Primavera_P6_Baseline_Risk_Intelligence_Engine_V1/) | Structured baseline risk screening and prioritization |
+| [Monte Carlo Schedule Risk Simulator V1](./Monte-Carlo-Schedule-Risk-Simulator/) | Early illustrative duration-risk exercise; superseded for flagship presentation by the Data Center network experiment |
+| [Primavera P6 Baseline Risk Intelligence Engine V1](./Primavera_P6_Baseline_Risk_Intelligence_Engine_V1/) | Structured baseline risk screening and prioritization |
 | [Performance-Driven Risk & Forecasting Engine V03](./Performance-Driven-Risk-Forecasting-Engine-V03/) | Performance metrics and exploratory forecasting |
 | [Project Controls Early Warning System V01](./Project_Controls_Early_Warning_System_V01/) | Rule-based issue detection, alerts and escalation |
 | [FIDIC Claims & EOT Intelligence Assistant V01](./FIDIC-Claims-EOT-Intelligence-Assistant-V01/) | Early-stage delay-event and documentation screening; **not a contractual entitlement determination or forensic delay analysis** |
