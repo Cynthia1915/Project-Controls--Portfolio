@@ -27,6 +27,18 @@ I developed this independent **synthetic project-controls case study** to connec
 
 **Project objective:** demonstrate a repeatable reporting workflow that helps a project-controls team move from a static schedule snapshot to **performance trends, forecast interpretation and prioritized actions**.
 
+## My consulting-style case study
+
+I developed this integrated controls model to explore a capital-project leadership question: **how can schedule updates, cost indicators and quantified uncertainty be translated into earlier, better-informed management decisions?**
+
+My approach connects the P6 schedule baseline and reporting updates with performance interpretation, forecast analysis and a 10,000-run **experimental** schedule-risk simulation. I use the outputs to frame management attention around design-to-procurement interfaces, long-lead electrical equipment and commissioning readiness—not to imply that a dashboard alone validates the forecast.
+
+**What I delivered:** P6 schedule and update evidence, a synthetic USD 120m reporting model, executive dashboard, XER audit tools, reproducible network Monte Carlo analysis and an executive risk view. **What remains to validate:** workbook-to-dashboard EVM reconciliation, P6 calendar-equivalent deterministic dates, correlated duration risks and contractual milestone probabilities.
+
+[Executive controls dashboard](./dashboard/01-executive-overview.png) · [Monte Carlo dashboard](./dashboard/monte-carlo-executive.html) · [Risk results and limitations](./docs/monte-carlo-experimental-results.md)
+
+---
+
 ## Monte Carlo schedule-risk analysis\n\nI extended my schedule analysis with a reproducible 10,000-run Monte Carlo experiment using the Data Center XER activity network. The objective was to quantify **relative-hour milestone exposure** under transparent, illustrative duration uncertainty and to turn the output into an executive decision-support view.\n\n**[Open the executive Monte Carlo dashboard](./dashboard/monte-carlo-executive.html)** · [Read my simulation results and limitations](./docs/monte-carlo-experimental-results.md) · [Reproduce the analysis](./docs/monte-carlo-risk-reporting.md)\n\n| Modeled indicator | Relative hours |\n| --- | ---: |\n| Deterministic reference | 3,296.00 |\n| P50 | 3,440.92 |\n| P80 | 3,489.60 |\n| P90 | 3,527.74 |\n| P80 difference from reference | +193.60 |\n\n**My interpretation:** The experimental P80 exceeds the deterministic relative-hour reference by 193.60 hours. I treat this as a schedule-risk screening result, **not** a validated calendar contingency or contractual RFS completion probability. My next validation step is to reconcile the deterministic network with P6 calendars, progress, and scheduling options, then calibrate uncertainty and shared risks.\n\n## 01 — Planning & baseline control
 
 **[Read the Baseline, Schedule & Progress Updates walkthrough →](./docs/baseline-and-schedule-updates.md)**
