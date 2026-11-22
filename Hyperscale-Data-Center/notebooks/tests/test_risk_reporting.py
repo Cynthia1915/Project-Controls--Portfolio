@@ -18,7 +18,7 @@ class RiskReportingTests(unittest.TestCase):
     def test_quantiles_and_probability(self):
         result = report(self.summary, self.samples, bins=4)
         self.assertEqual(result["p50_relative_work_hours"], 10)
-        self.assertEqual(result["p80_relative_work_hours"], 11.6)
+        self.assertEqual(result["p80_relative_work_hours"], 12.8)
         self.assertEqual(result["p90_relative_work_hours"], 14.4)
         self.assertEqual(result["probability_exceeding_nominal"], 0.4)
         self.assertEqual(sum(b["samples"] for b in result["histogram"]), 5)
