@@ -1,1 +1,90 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DC-HYP | Monte Carlo Schedule Risk</title><style>body{font:16px system-ui,sans-serif;background:#0d1728;color:#f1f5fc;margin:0;padding:32px}main{max-width:1100px;margin:auto}h1{font-size:32px;margin:8px 0}p{line-height:1.55;color:#b6c6da}.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:24px 0}.card{background:#19283d;border:1px solid #32445e;border-radius:14px;padding:20px}.card b{font-size:27px;display:block;margin-top:8px}.card span{font-size:13px;color:#b6c6da}svg{width:100%;height:auto}.tag{color:#93c5fd;font-weight:700;letter-spacing:.08em;font-size:12px}table{border-collapse:collapse;width:100%;margin:20px 0}td,th{padding:12px;text-align:left;border-bottom:1px solid #32445e}th{color:#b6c6da}.note{border-left:4px solid #e6b566;padding-left:16px}a{color:#93c5fd}@media print{body{background:white;color:#111}p,.card span,th{color:#444}.card{background:#f5f7fa;border-color:#ddd}}</style></head><body><main><div class="tag">INDEPENDENT PROJECT CONTROLS CASE STUDY · DC-HYP-FINAL-6</div><h1>Monte Carlo Schedule Risk | Executive Review</h1><p>I evaluated the modeled readiness-for-service milestone using 10,000 network simulations based on the P6 XER export. The results quantify relative-hour exposure under illustrative activity-duration uncertainty; they are not calendar-based completion-date probabilities.</p><div class="kpis"><div class="card"><span>Median · P50</span><b>3,440.92 h</b></div><div class="card"><span>Planning scenario · P80</span><b>3,489.60 h</b></div><div class="card"><span>Higher percentile · P90</span><b>3,527.74 h</b></div><div class="card"><span>P80 − deterministic</span><b>+193.60 h</b></div></div><div class="card"><h2>Distribution of simulated milestone finishes</h2><p>Relative modeled hours · 10,000 runs · fixed random seed 42</p><svg id="hist" viewBox="0 0 960 350" role="img" aria-label="Histogram of 10000 simulated relative-hour finishes"></svg><p>Vertical markers: P50, P80, P90. All results are in the model's continuous-hour coordinate system.</p></div><div class="card"><h2>Schedule risk indicators</h2><table><tr><th>Metric</th><th>Modeled result</th></tr><tr><td>Deterministic reference</td><td>3,296.00 h</td></tr><tr><td>P10</td><td>3,381.88 h</td></tr><tr><td>P50</td><td>3,440.92 h</td></tr><tr><td>P80</td><td>3,489.60 h</td></tr><tr><td>P90</td><td>3,527.74 h</td></tr><tr><td>Fraction above deterministic reference</td><td>99.96% (not contractual lateness)</td></tr></table><p>Schedule basis: 808 activities, 1,406 relationships, P6 data date 31 January 2026, target milestone RFS-040.</p></div><div class="card"><h2>Management interpretation</h2><p><strong>Decision signal:</strong> The modeled P80 scenario exceeds the deterministic reference by 193.60 relative hours. I would use this as a screening signal to prioritize schedule-risk calibration and critical-path review, not as a validated contingency recommendation.</p><p><strong>Next checks:</strong> Reconcile the deterministic network against P6 calendars and progress logic; validate duration assumptions and common-cause risk correlation; identify driving paths and activity criticality before proposing mitigation.</p><p class="note"><strong>Validation status — experimental.</strong> The calculation uses independent triangular multipliers (0.80 / 1.00 / 1.30), continuous-hour precedence logic, and no P6 calendar reconstruction. Absolute completion dates, contractual milestone confidence and risk-driver rankings are not established.</p></div><p>Source: <a href="../docs/monte-carlo-experimental-results.md">Monte Carlo analysis and assumptions</a> · Synthetic portfolio project. Designed as a transparent, reproducible analytical case study.</p></main><script>const bins=[16,66,216,531,1005,1525,1826,1575,1125,690,458,299,233,140,112,96,58,16,9,4],svg=document.getElementById('hist'),NS='http://www.w3.org/2000/svg',left=55,top=22,w=865,h=258,min=3290.18,max=3726.63;function add(t,a,s){const e=document.createElementNS(NS,t);Object.entries(a).forEach(([k,v])=>e.setAttribute(k,v));if(s)e.textContent=s;svg.appendChild(e)}bins.forEach((n,i)=>{let x=left+i*w/20,y=top+h-n/1900*h;add('rect',{x:x+2,y,width:w/20-4,height:top+h-y,fill:'#65a8f2',rx:2})});[0,500,1000,1500].forEach(n=>{let y=top+h-n/1900*h;add('line',{x1:left,y1:y,x2:left+w,y2:y,stroke:'#35465d'});add('text',{x:6,y:y+4,fill:'#b6c6da','font-size':13},String(n))});[[3440.92,'P50','#a9e7bb'],[3489.6,'P80','#f3cc7c'],[3527.74,'P90','#f29b91']].forEach(([v,t,c])=>{let x=left+(v-min)/(max-min)*w;add('line',{x1:x,y1:top,x2:x,y2:top+h,stroke:c,'stroke-width':2,'stroke-dasharray':'5 4'});add('text',{x:x+4,y:top+14,fill:c,'font-size':14},t)});[3300,3400,3500,3600,3700].forEach(n=>{let x=left+(n-min)/(max-min)*w;add('text',{x:x-18,y:top+h+25,fill:'#b6c6da','font-size':13},String(n))})</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DC-HYP | Monte Carlo Schedule Risk</title>
+<style>
+body{font:16px system-ui,sans-serif;background:#0d1728;color:#f1f5fc;margin:0;padding:32px}main{max-width:1100px;margin:auto}h1{font-size:32px;margin:8px 0}p{line-height:1.55;color:#b6c6da}.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:24px 0}.card{background:#19283d;border:1px solid #32445e;border-radius:14px;padding:20px}.card b{font-size:27px;display:block;margin-top:8px}.card span{font-size:13px;color:#b6c6da}svg{width:100%;height:auto}.tag{color:#93c5fd;font-weight:700;letter-spacing:.08em;font-size:12px}table{border-collapse:collapse;width:100%;margin:20px 0}td,th{padding:12px;text-align:left;border-bottom:1px solid #32445e}th{color:#b6c6da}.note{border-left:4px solid #e6b566;padding-left:16px}a{color:#93c5fd}@media print{body{background:white;color:#111}p,.card span,th{color:#444}.card{background:#f5f7fa;border-color:#ddd}}
+</style>
+</head>
+<body>
+<main>
+<div class="tag">INDEPENDENT PROJECT CONTROLS CASE STUDY · DC-HYP-FINAL-6</div>
+<h1>Monte Carlo Schedule Risk | Executive Review</h1>
+<p>I evaluated the modeled readiness-for-service milestone using 10,000 network simulations based on the P6 XER export. The results quantify relative-hour exposure under illustrative activity-duration uncertainty; they are not calendar-based completion-date probabilities.</p>
+<div class="kpis">
+<div class="card">
+<span>Median · P50</span>
+<b>3,440.92 h</b>
+</div>
+<div class="card">
+<span>Planning scenario · P80</span>
+<b>3,489.60 h</b>
+</div>
+<div class="card">
+<span>Higher percentile · P90</span>
+<b>3,527.74 h</b>
+</div>
+<div class="card">
+<span>P80 − deterministic</span>
+<b>+193.60 h</b>
+</div>
+</div>
+<div class="card">
+<h2>Distribution of simulated milestone finishes</h2>
+<p>Relative modeled hours · 10,000 runs · fixed random seed 42</p>
+<svg id="hist" viewBox="0 0 960 350" role="img" aria-label="Histogram of 10000 simulated relative-hour finishes">
+</svg>
+<p>Vertical markers: P50, P80, P90. All results are in the model's continuous-hour coordinate system.</p>
+</div>
+<div class="card">
+<h2>Schedule risk indicators</h2>
+<table>
+<tr>
+<th>Metric</th>
+<th>Modeled result</th>
+</tr>
+<tr>
+<td>Deterministic reference</td>
+<td>3,296.00 h</td>
+</tr>
+<tr>
+<td>P10</td>
+<td>3,381.88 h</td>
+</tr>
+<tr>
+<td>P50</td>
+<td>3,440.92 h</td>
+</tr>
+<tr>
+<td>P80</td>
+<td>3,489.60 h</td>
+</tr>
+<tr>
+<td>P90</td>
+<td>3,527.74 h</td>
+</tr>
+<tr>
+<td>Fraction above deterministic reference</td>
+<td>99.96% (not contractual lateness)</td>
+</tr>
+</table>
+<p>Schedule basis: 808 activities, 1,406 relationships, P6 data date 31 January 2026, target milestone RFS-040.</p>
+</div>
+<div class="card">
+<h2>Management interpretation</h2>
+<p>
+<strong>Decision signal:</strong> The modeled P80 scenario exceeds the deterministic reference by 193.60 relative hours. I would use this as a screening signal to prioritize schedule-risk calibration and critical-path review, not as a validated contingency recommendation.</p>
+<p>
+<strong>Next checks:</strong> Reconcile the deterministic network against P6 calendars and progress logic; validate duration assumptions and common-cause risk correlation; identify driving paths and activity criticality before proposing mitigation.</p>
+<p class="note">
+<strong>Validation status — experimental.</strong> The calculation uses independent triangular multipliers (0.80 / 1.00 / 1.30), continuous-hour precedence logic, and no P6 calendar reconstruction. Absolute completion dates, contractual milestone confidence and risk-driver rankings are not established.</p>
+</div>
+<p>Source: <a href="../docs/monte-carlo-experimental-results.md">Monte Carlo analysis and assumptions</a> · Synthetic portfolio project. Designed as a transparent, reproducible analytical case study.</p>
+</main>
+<script>
+const bins=[16,66,216,531,1005,1525,1826,1575,1125,690,458,299,233,140,112,96,58,16,9,4],svg=document.getElementById('hist'),NS='http://www.w3.org/2000/svg',left=55,top=22,w=865,h=258,min=3290.18,max=3726.63;function add(t,a,s){const e=document.createElementNS(NS,t);Object.entries(a).forEach(([k,v])=>e.setAttribute(k,v));if(s)e.textContent=s;svg.appendChild(e)}bins.forEach((n,i)=>{let x=left+i*w/20,y=top+h-n/1900*h;add('rect',{x:x+2,y,width:w/20-4,height:top+h-y,fill:'#65a8f2',rx:2})});[0,500,1000,1500].forEach(n=>{let y=top+h-n/1900*h;add('line',{x1:left,y1:y,x2:left+w,y2:y,stroke:'#35465d'});add('text',{x:6,y:y+4,fill:'#b6c6da','font-size':13},String(n))});[[3440.92,'P50','#a9e7bb'],[3489.6,'P80','#f3cc7c'],[3527.74,'P90','#f29b91']].forEach(([v,t,c])=>{let x=left+(v-min)/(max-min)*w;add('line',{x1:x,y1:top,x2:x,y2:top+h,stroke:c,'stroke-width':2,'stroke-dasharray':'5 4'});add('text',{x:x+4,y:top+14,fill:c,'font-size':14},t)});[3300,3400,3500,3600,3700].forEach(n=>{let x=left+(n-min)/(max-min)*w;add('text',{x:x-18,y:top+h+25,fill:'#b6c6da','font-size':13},String(n))})
+</script>
+</body>
+</html>
